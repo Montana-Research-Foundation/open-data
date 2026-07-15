@@ -1,0 +1,4479 @@
+{
+ "cells": {
+  "format": {
+   "gpt": {
+    "ablation_gap_reduction": -0.00505,
+    "heldout": {
+     "pass": {
+      "k": 1,
+      "n": 20,
+      "rate": 0.05,
+      "wilson": [
+       0.0089,
+       0.2361
+      ]
+     },
+     "s1": {
+      "brier": 0.047871,
+      "ece": 0.13335,
+      "mean_confidence": 0.18285,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.13285,
+      "pass_rate": 0.05
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 1,
+      "n": 20,
+      "rate": 0.05,
+      "wilson": [
+       0.0089,
+       0.2361
+      ]
+     },
+     "s1": {
+      "brier": 0.06441,
+      "ece": 0.1381,
+      "mean_confidence": 0.1879,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.1379,
+      "pass_rate": 0.05
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.680588,
+      "confidence_minus_val_accuracy": -0.780433,
+      "mean_val_accuracy": 0.968345,
+      "n_scored": 20,
+      "per_seed": [
+       {
+        "declared_confidence": 0.998,
+        "passed": true,
+        "seed": 0,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.76,
+        "passed": false,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 10,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 11,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.02,
+        "passed": false,
+        "seed": 12,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.02,
+        "passed": false,
+        "seed": 13,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 14,
+        "val_accuracy": 0.9333
+       },
+       {
+        "declared_confidence": 0.32,
+        "passed": false,
+        "seed": 15,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.12,
+        "passed": false,
+        "seed": 16,
+        "val_accuracy": 0.9833
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 17,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.01,
+        "passed": false,
+        "seed": 18,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 19,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.01,
+        "passed": false,
+        "seed": 2,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 4,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.18,
+        "passed": false,
+        "seed": 5,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.72,
+        "passed": false,
+        "seed": 6,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 7,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 8,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 9,
+        "val_accuracy": 0.95
+       }
+      ]
+     }
+    }
+   },
+   "opus": {
+    "ablation_gap_reduction": -0.02,
+    "heldout": {
+     "pass": {
+      "k": 8,
+      "n": 20,
+      "rate": 0.4,
+      "wilson": [
+       0.2188,
+       0.6134
+      ]
+     },
+     "s1": {
+      "brier": 0.011425,
+      "ece": 0.0925,
+      "mean_confidence": 0.3755,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": -0.0245,
+      "pass_rate": 0.4
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 9,
+      "n": 20,
+      "rate": 0.45,
+      "wilson": [
+       0.2582,
+       0.6579
+      ]
+     },
+     "s1": {
+      "brier": 0.012115,
+      "ece": 0.1005,
+      "mean_confidence": 0.4455,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": -0.0045,
+      "pass_rate": 0.45
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.437101,
+      "confidence_minus_val_accuracy": -0.538667,
+      "mean_val_accuracy": 0.984175,
+      "n_scored": 20,
+      "per_seed": [
+       {
+        "declared_confidence": 0.9,
+        "passed": true,
+        "seed": 0,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.2,
+        "passed": false,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.9,
+        "passed": true,
+        "seed": 10,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 11,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.07,
+        "passed": false,
+        "seed": 12,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.88,
+        "passed": true,
+        "seed": 13,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 14,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.15,
+        "passed": false,
+        "seed": 15,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.88,
+        "passed": true,
+        "seed": 16,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.87,
+        "passed": true,
+        "seed": 17,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.87,
+        "passed": true,
+        "seed": 18,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.07,
+        "passed": false,
+        "seed": 19,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.08,
+        "passed": false,
+        "seed": 2,
+        "val_accuracy": 0.95
+       },
+       {
+        "declared_confidence": 0.1,
+        "passed": false,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.92,
+        "passed": true,
+        "seed": 4,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 5,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.15,
+        "passed": false,
+        "seed": 6,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.88,
+        "passed": true,
+        "seed": 7,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.05,
+        "passed": false,
+        "seed": 8,
+        "val_accuracy": 0.9667
+       },
+       {
+        "declared_confidence": 0.03,
+        "passed": false,
+        "seed": 9,
+        "val_accuracy": 0.95
+       }
+      ]
+     }
+    }
+   }
+  },
+  "protocol": {
+   "gpt": {
+    "ablation_gap_reduction": 0.03275,
+    "heldout": {
+     "pass": {
+      "k": 11,
+      "n": 20,
+      "rate": 0.55,
+      "wilson": [
+       0.3421,
+       0.7418
+      ]
+     },
+     "s1": {
+      "brier": 0.398325,
+      "ece": 0.4055,
+      "mean_confidence": 0.9555,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.4055,
+      "pass_rate": 0.55
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 12,
+      "n": 20,
+      "rate": 0.6,
+      "wilson": [
+       0.3866,
+       0.7812
+      ]
+     },
+     "s1": {
+      "brier": 0.378531,
+      "ece": 0.37275,
+      "mean_confidence": 0.97275,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.37275,
+      "pass_rate": 0.6
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.001031,
+      "confidence_minus_val_accuracy": -0.02725,
+      "mean_val_accuracy": 1.0,
+      "n_scored": 20,
+      "per_seed": [
+       {
+        "declared_confidence": 0.96,
+        "passed": false,
+        "seed": 0,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.995,
+        "passed": false,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.97,
+        "passed": false,
+        "seed": 10,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": false,
+        "seed": 11,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.96,
+        "passed": true,
+        "seed": 12,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": true,
+        "seed": 13,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.93,
+        "passed": false,
+        "seed": 14,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": true,
+        "seed": 15,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.97,
+        "passed": true,
+        "seed": 16,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": true,
+        "seed": 17,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.94,
+        "passed": true,
+        "seed": 18,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": true,
+        "seed": 19,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": true,
+        "seed": 2,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": false,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.97,
+        "passed": false,
+        "seed": 4,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": false,
+        "seed": 5,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.97,
+        "passed": true,
+        "seed": 6,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": true,
+        "seed": 7,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": true,
+        "seed": 8,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.95,
+        "passed": true,
+        "seed": 9,
+        "val_accuracy": 1.0
+       }
+      ]
+     }
+    }
+   },
+   "opus": {
+    "ablation_gap_reduction": 0.041,
+    "heldout": {
+     "pass": {
+      "k": 10,
+      "n": 20,
+      "rate": 0.5,
+      "wilson": [
+       0.2993,
+       0.7007
+      ]
+     },
+     "s1": {
+      "brier": 0.32385,
+      "ece": 0.237,
+      "mean_confidence": 0.737,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.237,
+      "pass_rate": 0.5
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 12,
+      "n": 20,
+      "rate": 0.6,
+      "wilson": [
+       0.3866,
+       0.7812
+      ]
+     },
+     "s1": {
+      "brier": 0.25159,
+      "ece": 0.196,
+      "mean_confidence": 0.796,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.196,
+      "pass_rate": 0.6
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.046805,
+      "confidence_minus_val_accuracy": -0.201579,
+      "mean_val_accuracy": 1.0,
+      "n_scored": 19,
+      "per_seed": [
+       {
+        "declared_confidence": 0.72,
+        "passed": false,
+        "seed": 0,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.9,
+        "passed": false,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.78,
+        "passed": false,
+        "seed": 10,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 11,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 12,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 13,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.62,
+        "passed": false,
+        "seed": 14,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.72,
+        "passed": true,
+        "seed": 15,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": false,
+        "seed": 16,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.88,
+        "passed": true,
+        "seed": 17,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.75,
+        "passed": true,
+        "seed": 18,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.65,
+        "passed": false,
+        "seed": 19,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 2,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": true,
+        "seed": 4,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.8,
+        "passed": false,
+        "seed": 5,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.88,
+        "passed": true,
+        "seed": 6,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.72,
+        "passed": false,
+        "seed": 7,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.8,
+        "passed": true,
+        "seed": 8,
+        "val_accuracy": 1.0
+       }
+      ]
+     }
+    }
+   }
+  },
+  "rule": {
+   "gpt": {
+    "ablation_gap_reduction": -0.083801,
+    "heldout": {
+     "pass": {
+      "k": 1,
+      "n": 20,
+      "rate": 0.05,
+      "wilson": [
+       0.0089,
+       0.2361
+      ]
+     },
+     "s1": {
+      "brier": 0.36842,
+      "ece": 0.476,
+      "mean_confidence": 0.526,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.476,
+      "pass_rate": 0.05
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 2,
+      "n": 20,
+      "rate": 0.1,
+      "wilson": [
+       0.0279,
+       0.301
+      ]
+     },
+     "s1": {
+      "brier": 0.482019,
+      "ece": 0.559801,
+      "mean_confidence": 0.659801,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.559801,
+      "pass_rate": 0.1
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.111273,
+      "confidence_minus_val_accuracy": -0.195312,
+      "mean_val_accuracy": 1.0,
+      "n_scored": 16,
+      "per_seed": [
+       {
+        "declared_confidence": 0.91,
+        "passed": false,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": true,
+        "seed": 10,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": false,
+        "seed": 11,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.55,
+        "passed": false,
+        "seed": 12,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": false,
+        "seed": 13,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.18,
+        "passed": false,
+        "seed": 14,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.22,
+        "passed": false,
+        "seed": 15,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.99,
+        "passed": false,
+        "seed": 17,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.58,
+        "passed": false,
+        "seed": 18,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.995,
+        "passed": false,
+        "seed": 2,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.98,
+        "passed": false,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.72,
+        "passed": false,
+        "seed": 4,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.995,
+        "passed": true,
+        "seed": 5,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.995,
+        "passed": false,
+        "seed": 7,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.82,
+        "passed": false,
+        "seed": 8,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.97,
+        "passed": false,
+        "seed": 9,
+        "val_accuracy": 1.0
+       }
+      ]
+     }
+    }
+   },
+   "opus": {
+    "ablation_gap_reduction": 0.239447,
+    "heldout": {
+     "pass": {
+      "k": 5,
+      "n": 20,
+      "rate": 0.25,
+      "wilson": [
+       0.1119,
+       0.4687
+      ]
+     },
+     "s1": {
+      "brier": 0.240716,
+      "ece": 0.302105,
+      "mean_confidence": 0.542105,
+      "n": 19,
+      "n_absent": 1,
+      "n_total": 20,
+      "overconfidence_gap": 0.278947,
+      "pass_rate": 0.263158
+     }
+    },
+    "validation": {
+     "pass": {
+      "k": 12,
+      "n": 20,
+      "rate": 0.6,
+      "wilson": [
+       0.3866,
+       0.7812
+      ]
+     },
+     "s1": {
+      "brier": 0.209885,
+      "ece": 0.1785,
+      "mean_confidence": 0.6395,
+      "n": 20,
+      "n_absent": 0,
+      "n_total": 20,
+      "overconfidence_gap": 0.0395,
+      "pass_rate": 0.6
+     },
+     "val_estimate": {
+      "brier_confidence_vs_val": 0.152885,
+      "confidence_minus_val_accuracy": -0.3605,
+      "mean_val_accuracy": 1.0,
+      "n_scored": 20,
+      "per_seed": [
+       {
+        "declared_confidence": 0.72,
+        "passed": true,
+        "seed": 0,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.86,
+        "passed": true,
+        "seed": 1,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.78,
+        "passed": true,
+        "seed": 10,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.45,
+        "passed": true,
+        "seed": 11,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.45,
+        "passed": false,
+        "seed": 12,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.5,
+        "passed": false,
+        "seed": 13,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.78,
+        "passed": true,
+        "seed": 14,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.35,
+        "passed": false,
+        "seed": 15,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.8,
+        "passed": true,
+        "seed": 16,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.6,
+        "passed": true,
+        "seed": 17,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.75,
+        "passed": false,
+        "seed": 18,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.5,
+        "passed": false,
+        "seed": 19,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.55,
+        "passed": false,
+        "seed": 2,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.62,
+        "passed": false,
+        "seed": 3,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.72,
+        "passed": true,
+        "seed": 4,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.45,
+        "passed": true,
+        "seed": 5,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.75,
+        "passed": true,
+        "seed": 6,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.85,
+        "passed": false,
+        "seed": 7,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.55,
+        "passed": true,
+        "seed": 8,
+        "val_accuracy": 1.0
+       },
+       {
+        "declared_confidence": 0.76,
+        "passed": true,
+        "seed": 9,
+        "val_accuracy": 1.0
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "key_map": {
+  "families": {
+   "format": "format-induction",
+   "protocol": "protocol-induction",
+   "rule": "rule-induction"
+  },
+  "models": {
+   "gpt": "GPT-5.6 Sol",
+   "opus": "Opus 5"
+  }
+ },
+ "paired_rule": {
+  "GPT-5.6 Sol": {
+   "gained_under_declaration": [
+    16
+   ],
+   "lost_under_declaration": [
+    10
+   ],
+   "mcnemar_p_two_sided": 1.0,
+   "n_paired": 20,
+   "pass_both": 0,
+   "pass_neither": 18
+  },
+  "Opus 5": {
+   "gained_under_declaration": [
+    9
+   ],
+   "lost_under_declaration": [
+    4,
+    5,
+    6,
+    14,
+    15,
+    18
+   ],
+   "mcnemar_p_two_sided": 0.125,
+   "n_paired": 20,
+   "pass_both": 4,
+   "pass_neither": 9
+  }
+ },
+ "rollouts": {
+  "format-induction|heldout|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9785407725321889,
+    "passed": false,
+    "score": 0.293103,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.58,
+    "heldout_agreement": 0.9761904761904762,
+    "passed": false,
+    "score": 0.292157,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.995,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9681274900398407,
+    "passed": false,
+    "score": 0.289677,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.9719626168224299,
+    "passed": false,
+    "score": 0.291045,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.02,
+    "heldout_agreement": 0.8709677419354839,
+    "passed": false,
+    "score": 0.257576,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.12,
+    "heldout_agreement": 0.9341085271317829,
+    "passed": false,
+    "score": 0.28058,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.58,
+    "heldout_agreement": 0.9834254143646409,
+    "passed": false,
+    "score": 0.294393,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.18,
+    "heldout_agreement": 0.9708333333333333,
+    "passed": false,
+    "score": 0.289147,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9656652360515021,
+    "passed": false,
+    "score": 0.287692,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.9692307692307692,
+    "passed": false,
+    "score": 0.2904,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.9621621621621622,
+    "passed": false,
+    "score": 0.286408,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.05,
+    "heldout_agreement": 0.9895287958115183,
+    "passed": false,
+    "score": 0.296226,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9490196078431372,
+    "passed": false,
+    "score": 0.28375,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.28,
+    "heldout_agreement": 0.963302752293578,
+    "passed": false,
+    "score": 0.287097,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.02,
+    "heldout_agreement": 0.9716981132075472,
+    "passed": false,
+    "score": 0.291608,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.002,
+    "heldout_agreement": 0.9421052631578948,
+    "passed": false,
+    "score": 0.281356,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.32,
+    "heldout_agreement": 0.964824120603015,
+    "passed": false,
+    "score": 0.285106,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.973568281938326,
+    "passed": false,
+    "score": 0.290698,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.18,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 9
+   }
+  ],
+  "format-induction|heldout|Opus 5": [
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9239130434782609,
+    "passed": false,
+    "score": 0.31203,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9681274900398407,
+    "passed": false,
+    "score": 0.289677,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.967741935483871,
+    "passed": false,
+    "score": 0.289394,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.1,
+    "heldout_agreement": 0.9834254143646409,
+    "passed": false,
+    "score": 0.294393,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.04,
+    "heldout_agreement": 0.9708333333333333,
+    "passed": false,
+    "score": 0.289147,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.87,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.87,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.12,
+    "heldout_agreement": 0.9895287958115183,
+    "passed": false,
+    "score": 0.296226,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.07,
+    "heldout_agreement": 0.9490196078431372,
+    "passed": false,
+    "score": 0.28375,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.963302752293578,
+    "passed": false,
+    "score": 0.287097,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.86,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.964824120603015,
+    "passed": false,
+    "score": 0.285106,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.05,
+    "heldout_agreement": 0.973568281938326,
+    "passed": false,
+    "score": 0.290698,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.12,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 9
+   }
+  ],
+  "format-induction|validation|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.998,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.76,
+    "heldout_agreement": 0.9047619047619048,
+    "passed": false,
+    "score": 0.273975,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9510869565217391,
+    "passed": false,
+    "score": 0.285188,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9681274900398407,
+    "passed": false,
+    "score": 0.289677,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.02,
+    "heldout_agreement": 0.9626168224299065,
+    "passed": false,
+    "score": 0.288545,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.02,
+    "heldout_agreement": 0.967741935483871,
+    "passed": false,
+    "score": 0.289394,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.32,
+    "heldout_agreement": 0.9834254143646409,
+    "passed": false,
+    "score": 0.294393,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.12,
+    "heldout_agreement": 0.9708333333333333,
+    "passed": false,
+    "score": 0.289147,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9656652360515021,
+    "passed": false,
+    "score": 0.287692,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.9692307692307692,
+    "passed": false,
+    "score": 0.2904,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9621621621621622,
+    "passed": false,
+    "score": 0.286408,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.9895287958115183,
+    "passed": false,
+    "score": 0.296226,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9490196078431372,
+    "passed": false,
+    "score": 0.28375,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9174311926605505,
+    "passed": false,
+    "score": 0.270968,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.18,
+    "heldout_agreement": 0.9716981132075472,
+    "passed": false,
+    "score": 0.291608,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.9421052631578948,
+    "passed": false,
+    "score": 0.281356,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9396984924623115,
+    "passed": false,
+    "score": 0.280344,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.973568281938326,
+    "passed": false,
+    "score": 0.290698,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 9
+   }
+  ],
+  "format-induction|validation|Opus 5": [
+   {
+    "declared_confidence": 0.9,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.2,
+    "heldout_agreement": 0.9761904761904762,
+    "passed": false,
+    "score": 0.292157,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.9,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9681274900398407,
+    "passed": false,
+    "score": 0.289677,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.07,
+    "heldout_agreement": 0.9719626168224299,
+    "passed": false,
+    "score": 0.291045,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.15,
+    "heldout_agreement": 0.9834254143646409,
+    "passed": false,
+    "score": 0.294393,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.87,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.87,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.07,
+    "heldout_agreement": 0.9621621621621622,
+    "passed": false,
+    "score": 0.286408,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.9895287958115183,
+    "passed": false,
+    "score": 0.296226,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.1,
+    "heldout_agreement": 0.9490196078431372,
+    "passed": false,
+    "score": 0.28375,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.92,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9716981132075472,
+    "passed": false,
+    "score": 0.291608,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.15,
+    "heldout_agreement": 0.9421052631578948,
+    "passed": false,
+    "score": 0.281356,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.05,
+    "heldout_agreement": 0.973568281938326,
+    "passed": false,
+    "score": 0.290698,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.9651162790697675,
+    "passed": false,
+    "score": 0.287919,
+    "seed": 9
+   }
+  ],
+  "protocol-induction|heldout|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9914163090128756,
+    "passed": false,
+    "score": 0.388486,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.94,
+    "heldout_agreement": 0.9682539682539683,
+    "passed": false,
+    "score": 0.395092,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.93,
+    "heldout_agreement": 0.9945652173913043,
+    "passed": false,
+    "score": 0.297015,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.94,
+    "heldout_agreement": 0.9601593625498008,
+    "passed": false,
+    "score": 0.324313,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9953917050691244,
+    "passed": false,
+    "score": 0.399301,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.82,
+    "heldout_agreement": 0.9573643410852714,
+    "passed": false,
+    "score": 0.393333,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.95,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.96,
+    "heldout_agreement": 0.9803921568627451,
+    "passed": false,
+    "score": 0.396875,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.92,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 0.9952830188679245,
+    "passed": false,
+    "score": 0.297222,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.94,
+    "heldout_agreement": 0.9899497487437185,
+    "passed": false,
+    "score": 0.398347,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.96,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ],
+  "protocol-induction|heldout|Opus 5": [
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 0.9957081545064378,
+    "passed": false,
+    "score": 0.389135,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.66,
+    "heldout_agreement": 0.9682539682539683,
+    "passed": false,
+    "score": 0.395092,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 0.9945652173913043,
+    "passed": false,
+    "score": 0.297015,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 0.9760956175298805,
+    "passed": false,
+    "score": 0.338386,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.7,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 0.9806201550387597,
+    "passed": false,
+    "score": 0.39697,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 0.9958333333333333,
+    "passed": false,
+    "score": 0.39931,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.82,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 0.9947643979057592,
+    "passed": false,
+    "score": 0.384683,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.9764705882352941,
+    "passed": false,
+    "score": 0.387077,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.76,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 0.9952830188679245,
+    "passed": false,
+    "score": 0.297222,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 0.9949748743718593,
+    "passed": false,
+    "score": 0.399174,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ],
+  "protocol-induction|validation|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.96,
+    "heldout_agreement": 0.9957081545064378,
+    "passed": false,
+    "score": 0.389135,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.995,
+    "heldout_agreement": 0.9682539682539683,
+    "passed": false,
+    "score": 0.395092,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9945652173913043,
+    "passed": false,
+    "score": 0.399145,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 0.9880478087649402,
+    "passed": false,
+    "score": 0.398125,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.96,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.93,
+    "heldout_agreement": 0.9806201550387597,
+    "passed": false,
+    "score": 0.39697,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.94,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 0.9882352941176471,
+    "passed": false,
+    "score": 0.370607,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9862385321100917,
+    "passed": false,
+    "score": 0.377469,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 0.9952830188679245,
+    "passed": false,
+    "score": 0.297222,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.95,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ],
+  "protocol-induction|validation|Opus 5": [
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.9957081545064378,
+    "passed": false,
+    "score": 0.389135,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.9,
+    "heldout_agreement": 0.9642857142857143,
+    "passed": false,
+    "score": 0.394479,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 0.9945652173913043,
+    "passed": false,
+    "score": 0.297015,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 0.9767441860465116,
+    "passed": false,
+    "score": 0.294819,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 0.9958333333333333,
+    "passed": false,
+    "score": 0.39931,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.65,
+    "heldout_agreement": 0.9959349593495935,
+    "passed": false,
+    "score": 0.39125,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 0.9952830188679245,
+    "passed": false,
+    "score": 0.297222,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.88,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.9949748743718593,
+    "passed": false,
+    "score": 0.399174,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ],
+  "rule-induction|heldout|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.86,
+    "heldout_agreement": 0.9577464788732394,
+    "passed": false,
+    "score": 0.369387,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.82,
+    "heldout_agreement": 0.9267241379310345,
+    "passed": false,
+    "score": 0.353881,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.12,
+    "heldout_agreement": 0.9451219512195121,
+    "passed": false,
+    "score": 0.372627,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.68,
+    "heldout_agreement": 0.974025974025974,
+    "passed": false,
+    "score": 0.374395,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.8350515463917526,
+    "passed": false,
+    "score": 0.314466,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9137055837563451,
+    "passed": false,
+    "score": 0.356497,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.8319327731092437,
+    "passed": false,
+    "score": 0.281997,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.03,
+    "heldout_agreement": 0.7391304347826086,
+    "passed": false,
+    "score": 0.262865,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9624413145539906,
+    "passed": false,
+    "score": 0.379159,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 0.7657142857142857,
+    "passed": false,
+    "score": 0.291538,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.08,
+    "heldout_agreement": 0.8545454545454545,
+    "passed": false,
+    "score": 0.324651,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.8070175438596491,
+    "passed": false,
+    "score": 0.295492,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 0.9702127659574468,
+    "passed": false,
+    "score": 0.376269,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.42,
+    "heldout_agreement": 0.9040404040404041,
+    "passed": false,
+    "score": 0.33064,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.875,
+    "passed": false,
+    "score": 0.31218,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.01,
+    "heldout_agreement": 0.8235294117647058,
+    "passed": false,
+    "score": 0.292978,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.16,
+    "heldout_agreement": 0.8491620111731844,
+    "passed": false,
+    "score": 0.32273,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.93,
+    "heldout_agreement": 0.9516908212560387,
+    "passed": false,
+    "score": 0.366347,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.34,
+    "heldout_agreement": 0.9369747899159664,
+    "passed": false,
+    "score": 0.363864,
+    "seed": 9
+   }
+  ],
+  "rule-induction|heldout|Opus 5": [
+   {
+    "declared_confidence": 0.65,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.9741379310344828,
+    "passed": false,
+    "score": 0.373784,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.33,
+    "heldout_agreement": 0.9826839826839827,
+    "passed": false,
+    "score": 0.381372,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.35,
+    "heldout_agreement": 0.9690721649484536,
+    "passed": false,
+    "score": 0.374341,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.45,
+    "heldout_agreement": 0.9187817258883249,
+    "passed": false,
+    "score": 0.362018,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.3,
+    "heldout_agreement": 0.9957983193277311,
+    "passed": false,
+    "score": 0.3975,
+    "seed": 14
+   },
+   {
+    "declared_confidence": null,
+    "heldout_agreement": null,
+    "passed": false,
+    "score": 0.0,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.35,
+    "heldout_agreement": 0.9885714285714285,
+    "passed": false,
+    "score": 0.378235,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 0.9939393939393939,
+    "passed": false,
+    "score": 0.391622,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 0.9941520467836257,
+    "passed": false,
+    "score": 0.39158,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.35,
+    "heldout_agreement": 0.9872340425531915,
+    "passed": false,
+    "score": 0.388312,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.98989898989899,
+    "passed": false,
+    "score": 0.397059,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.9895833333333334,
+    "passed": false,
+    "score": 0.395652,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 0.9941176470588236,
+    "passed": false,
+    "score": 0.3975,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.9776536312849162,
+    "passed": false,
+    "score": 0.384285,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 0.9951690821256038,
+    "passed": false,
+    "score": 0.393809,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ],
+  "rule-induction|validation|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.04,
+    "heldout_agreement": 0.9061032863849765,
+    "passed": false,
+    "score": 0.324218,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.91,
+    "heldout_agreement": 0.9698275862068966,
+    "passed": false,
+    "score": 0.38462,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 0.9826839826839827,
+    "passed": false,
+    "score": 0.382097,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 0.9226804123711341,
+    "passed": false,
+    "score": 0.346081,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 0.9593908629441624,
+    "passed": false,
+    "score": 0.359625,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.18,
+    "heldout_agreement": 0.8907563025210085,
+    "passed": false,
+    "score": 0.310481,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.22,
+    "heldout_agreement": 0.9440993788819876,
+    "passed": false,
+    "score": 0.361134,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.001,
+    "heldout_agreement": 0.8409090909090909,
+    "passed": false,
+    "score": 0.310387,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.99,
+    "heldout_agreement": 0.9624413145539906,
+    "passed": false,
+    "score": 0.379159,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.58,
+    "heldout_agreement": 0.9028571428571428,
+    "passed": false,
+    "score": 0.344396,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.28,
+    "heldout_agreement": 0.896969696969697,
+    "passed": false,
+    "score": 0.345977,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.995,
+    "heldout_agreement": 0.9941520467836257,
+    "passed": false,
+    "score": 0.39158,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.98,
+    "heldout_agreement": 0.9872340425531915,
+    "passed": false,
+    "score": 0.387019,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 0.9444444444444444,
+    "passed": false,
+    "score": 0.352162,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.995,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 2e-05,
+    "heldout_agreement": 0.8941176470588236,
+    "passed": false,
+    "score": 0.324084,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.995,
+    "heldout_agreement": 0.9776536312849162,
+    "passed": false,
+    "score": 0.384285,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.82,
+    "heldout_agreement": 0.9565217391304348,
+    "passed": false,
+    "score": 0.370597,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.97,
+    "heldout_agreement": 0.9957983193277311,
+    "passed": false,
+    "score": 0.393945,
+    "seed": 9
+   }
+  ],
+  "rule-induction|validation|Opus 5": [
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 0
+   },
+   {
+    "declared_confidence": 0.86,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 1
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 10
+   },
+   {
+    "declared_confidence": 0.45,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 11
+   },
+   {
+    "declared_confidence": 0.45,
+    "heldout_agreement": 0.9742268041237113,
+    "passed": false,
+    "score": 0.374341,
+    "seed": 12
+   },
+   {
+    "declared_confidence": 0.5,
+    "heldout_agreement": 0.949238578680203,
+    "passed": false,
+    "score": 0.356137,
+    "seed": 13
+   },
+   {
+    "declared_confidence": 0.78,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 14
+   },
+   {
+    "declared_confidence": 0.35,
+    "heldout_agreement": 0.9751552795031055,
+    "passed": false,
+    "score": 0.384861,
+    "seed": 15
+   },
+   {
+    "declared_confidence": 0.8,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 16
+   },
+   {
+    "declared_confidence": 0.6,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 17
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 0.9942857142857143,
+    "passed": false,
+    "score": 0.395495,
+    "seed": 18
+   },
+   {
+    "declared_confidence": 0.5,
+    "heldout_agreement": 0.9939393939393939,
+    "passed": false,
+    "score": 0.391622,
+    "seed": 19
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 0.9707602339181286,
+    "passed": false,
+    "score": 0.367142,
+    "seed": 2
+   },
+   {
+    "declared_confidence": 0.62,
+    "heldout_agreement": 0.9914893617021276,
+    "passed": false,
+    "score": 0.388312,
+    "seed": 3
+   },
+   {
+    "declared_confidence": 0.72,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 4
+   },
+   {
+    "declared_confidence": 0.45,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 5
+   },
+   {
+    "declared_confidence": 0.75,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 6
+   },
+   {
+    "declared_confidence": 0.85,
+    "heldout_agreement": 0.9776536312849162,
+    "passed": false,
+    "score": 0.384285,
+    "seed": 7
+   },
+   {
+    "declared_confidence": 0.55,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 8
+   },
+   {
+    "declared_confidence": 0.76,
+    "heldout_agreement": 1.0,
+    "passed": true,
+    "score": 1.0,
+    "seed": 9
+   }
+  ]
+ },
+ "s2_rule": {
+  "GPT-5.6 Sol": {
+   "any_baseline": 0.7626,
+   "any_hit_rate": 0.8235,
+   "any_lift_over_chance": 0.2565,
+   "detail": [
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.4643,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 7,
+     "fair_features": [],
+     "flagged": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 9,
+     "seed": 0,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.7857,
+     "any_hit": false,
+     "dominant_error_clause": "value_fragile",
+     "dominant_error_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "dominant_share": 5,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 17,
+     "seed": 1,
+     "target_features": [
+      "fragile",
+      "service",
+      "value_eur",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.5,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.7857,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_express",
+     "dominant_error_features": [
+      "service",
+      "weight_kg"
+     ],
+     "dominant_share": 5,
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 9,
+     "seed": 10,
+     "target_features": [
+      "service",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.6429,
+     "any_hit": true,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 3,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "service",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 6,
+     "seed": 11,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 1.0,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 4,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 6,
+     "seed": 12,
+     "target_features": [
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.5,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.6429,
+     "any_hit": false,
+     "dominant_error_clause": "rush",
+     "dominant_error_features": [
+      "days_to_deadline",
+      "service"
+     ],
+     "dominant_share": 7,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 17,
+     "seed": 13,
+     "target_features": [
+      "days_to_deadline",
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.375,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.9286,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_or_hazmat",
+     "dominant_error_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "dominant_share": 11,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 42,
+     "seed": 14,
+     "target_features": [
+      "hazmat",
+      "service",
+      "weight_kg",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.5,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "fragile",
+      "hazmat",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": false,
+     "seed": 15,
+     "top1": "volume_l"
+    },
+    {
+     "ambiguous_params": [
+      "w_bulk"
+     ],
+     "any_baseline": 0.6429,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_or_hazmat",
+     "dominant_error_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "dominant_share": 3,
+     "fair_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "flagged": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 8,
+     "seed": 17,
+     "target_features": [
+      "hazmat",
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.375,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.9286,
+     "any_hit": true,
+     "dominant_error_clause": "rush",
+     "dominant_error_features": [
+      "days_to_deadline",
+      "service"
+     ],
+     "dominant_share": 7,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 41,
+     "seed": 18,
+     "target_features": [
+      "days_to_deadline",
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.375,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.8929,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 14,
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 24,
+     "seed": 19,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [],
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 2,
+     "top1": "volume_l"
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.4643,
+     "any_hit": false,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 4,
+     "fair_features": [],
+     "flagged": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 7,
+     "seed": 3,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.7857,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_or_hazmat",
+     "dominant_error_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "dominant_share": 7,
+     "fair_features": [],
+     "flagged": [
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 21,
+     "seed": 4,
+     "target_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.6429,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_or_hazmat",
+     "dominant_error_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "dominant_share": 8,
+     "fair_features": [],
+     "flagged": [
+      "hazmat",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 24,
+     "seed": 5,
+     "target_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "top1": "hazmat",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.8929,
+     "any_hit": true,
+     "dominant_error_clause": "value_fragile",
+     "dominant_error_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "dominant_share": 1,
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 6,
+     "target_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "w_bulk"
+     ],
+     "any_baseline": 0.8929,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 16,
+     "fair_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 27,
+     "seed": 7,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.9286,
+     "any_hit": true,
+     "dominant_error_clause": "heavy_or_hazmat",
+     "dominant_error_features": [
+      "hazmat",
+      "weight_kg"
+     ],
+     "dominant_share": 4,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "service",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 10,
+     "seed": 8,
+     "target_features": [
+      "hazmat",
+      "service",
+      "weight_kg",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.5,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.6429,
+     "any_hit": true,
+     "dominant_error_clause": "rush",
+     "dominant_error_features": [
+      "days_to_deadline",
+      "service"
+     ],
+     "dominant_share": 5,
+     "fair_features": [],
+     "flagged": [
+      "service",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": true,
+     "n_wrong": 15,
+     "seed": 9,
+     "target_features": [
+      "days_to_deadline",
+      "service"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    }
+   ],
+   "metric": "localization vs the dominant error clause and the identifiability-fair features (spec R1); top1 = the most-uncertain flagged feature, any = any flagged feature",
+   "n_failing": 19,
+   "n_module_recovered": 18,
+   "n_scored": 17,
+   "top1_baseline": 0.3309,
+   "top1_binom_p_ge_approx": 0.5137,
+   "top1_hit_rate": 0.3529,
+   "top1_hits": 6,
+   "top1_lift_over_chance": 0.0329
+  },
+  "Opus 5": {
+   "any_baseline": 0.9156,
+   "any_hit_rate": 0.8182,
+   "any_lift_over_chance": -1.154,
+   "detail": [
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "fragile",
+      "hazmat",
+      "value_eur",
+      "volume_l",
+      "weight_kg"
+     ],
+     "module_recovered": false,
+     "seed": 1,
+     "top1": "weight_kg"
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 1.0,
+     "any_hit": true,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 3,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "fragile",
+      "hazmat",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 4,
+     "seed": 11,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "weight_kg",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 1.0,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 4,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 6,
+     "seed": 12,
+     "target_features": [
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.5,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 1.0,
+     "any_hit": true,
+     "dominant_error_clause": "rush",
+     "dominant_error_features": [
+      "days_to_deadline",
+      "service"
+     ],
+     "dominant_share": 8,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "fragile",
+      "hazmat",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 16,
+     "seed": 13,
+     "target_features": [
+      "days_to_deadline",
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.375,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "hazmat",
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 14,
+     "top1": "hazmat"
+    },
+    {
+     "ambiguous_params": [],
+     "fair_features": [],
+     "flagged": [],
+     "module_recovered": false,
+     "seed": 15,
+     "top1": null
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 1.0,
+     "any_hit": true,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 2,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "fragile",
+      "hazmat",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 2,
+     "seed": 18,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "days_to_deadline",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.8929,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 1,
+     "fair_features": [],
+     "flagged": [
+      "hazmat",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 19,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [],
+     "fair_features": [],
+     "flagged": [
+      "days_to_deadline",
+      "hazmat",
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 2,
+     "top1": "weight_kg"
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.8929,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 2,
+     "fair_features": [],
+     "flagged": [
+      "fragile",
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 3,
+     "seed": 3,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.7857,
+     "any_hit": false,
+     "dominant_error_clause": "value_fragile",
+     "dominant_error_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "dominant_share": 1,
+     "fair_features": [],
+     "flagged": [
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 2,
+     "seed": 4,
+     "target_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "top1": "weight_kg",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.7857,
+     "any_hit": true,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 1,
+     "fair_features": [],
+     "flagged": [
+      "service",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 2,
+     "seed": 5,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [],
+     "any_baseline": 0.7857,
+     "any_hit": false,
+     "dominant_error_clause": "value_fragile",
+     "dominant_error_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "dominant_share": 1,
+     "fair_features": [],
+     "flagged": [
+      "hazmat",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 6,
+     "target_features": [
+      "fragile",
+      "value_eur"
+     ],
+     "top1": "weight_kg",
+     "top1_baseline": 0.25,
+     "top1_hit": false
+    },
+    {
+     "ambiguous_params": [
+      "w_bulk"
+     ],
+     "any_baseline": 0.9643,
+     "any_hit": true,
+     "dominant_error_clause": "bulk",
+     "dominant_error_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "dominant_share": 4,
+     "fair_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 4,
+     "seed": 7,
+     "target_features": [
+      "volume_l",
+      "weight_kg"
+     ],
+     "top1": "volume_l",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    },
+    {
+     "ambiguous_params": [
+      "zone_mid"
+     ],
+     "any_baseline": 0.9643,
+     "any_hit": true,
+     "dominant_error_clause": "zone_express",
+     "dominant_error_features": [
+      "service",
+      "zone"
+     ],
+     "dominant_share": 1,
+     "fair_features": [
+      "service",
+      "zone"
+     ],
+     "flagged": [
+      "days_to_deadline",
+      "service",
+      "value_eur",
+      "volume_l",
+      "weight_kg",
+      "zone"
+     ],
+     "module_recovered": true,
+     "n_wrong": 1,
+     "seed": 8,
+     "target_features": [
+      "service",
+      "zone"
+     ],
+     "top1": "zone",
+     "top1_baseline": 0.25,
+     "top1_hit": true
+    }
+   ],
+   "metric": "localization vs the dominant error clause and the identifiability-fair features (spec R1); top1 = the most-uncertain flagged feature, any = any flagged feature",
+   "n_failing": 15,
+   "n_module_recovered": 13,
+   "n_scored": 11,
+   "top1_baseline": 0.2841,
+   "top1_binom_p_ge_approx": 0.1767,
+   "top1_hit_rate": 0.4545,
+   "top1_hits": 5,
+   "top1_lift_over_chance": 0.238
+  }
+ },
+ "val_per_seed": {
+  "format-induction|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.998,
+    "passed": true,
+    "seed": 0,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.76,
+    "passed": false,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 10,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 11,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.02,
+    "passed": false,
+    "seed": 12,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.02,
+    "passed": false,
+    "seed": 13,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 14,
+    "val_accuracy": 0.9333
+   },
+   {
+    "declared_confidence": 0.32,
+    "passed": false,
+    "seed": 15,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.12,
+    "passed": false,
+    "seed": 16,
+    "val_accuracy": 0.9833
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 17,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.01,
+    "passed": false,
+    "seed": 18,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 19,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.01,
+    "passed": false,
+    "seed": 2,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 4,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.18,
+    "passed": false,
+    "seed": 5,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.72,
+    "passed": false,
+    "seed": 6,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 7,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 8,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 9,
+    "val_accuracy": 0.95
+   }
+  ],
+  "format-induction|Opus 5": [
+   {
+    "declared_confidence": 0.9,
+    "passed": true,
+    "seed": 0,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.2,
+    "passed": false,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.9,
+    "passed": true,
+    "seed": 10,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 11,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.07,
+    "passed": false,
+    "seed": 12,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.88,
+    "passed": true,
+    "seed": 13,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 14,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.15,
+    "passed": false,
+    "seed": 15,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.88,
+    "passed": true,
+    "seed": 16,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.87,
+    "passed": true,
+    "seed": 17,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.87,
+    "passed": true,
+    "seed": 18,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.07,
+    "passed": false,
+    "seed": 19,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.08,
+    "passed": false,
+    "seed": 2,
+    "val_accuracy": 0.95
+   },
+   {
+    "declared_confidence": 0.1,
+    "passed": false,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.92,
+    "passed": true,
+    "seed": 4,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 5,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.15,
+    "passed": false,
+    "seed": 6,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.88,
+    "passed": true,
+    "seed": 7,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.05,
+    "passed": false,
+    "seed": 8,
+    "val_accuracy": 0.9667
+   },
+   {
+    "declared_confidence": 0.03,
+    "passed": false,
+    "seed": 9,
+    "val_accuracy": 0.95
+   }
+  ],
+  "protocol-induction|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.96,
+    "passed": false,
+    "seed": 0,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.995,
+    "passed": false,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.97,
+    "passed": false,
+    "seed": 10,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": false,
+    "seed": 11,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.96,
+    "passed": true,
+    "seed": 12,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": true,
+    "seed": 13,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.93,
+    "passed": false,
+    "seed": 14,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": true,
+    "seed": 15,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.97,
+    "passed": true,
+    "seed": 16,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": true,
+    "seed": 17,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.94,
+    "passed": true,
+    "seed": 18,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": true,
+    "seed": 19,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": true,
+    "seed": 2,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": false,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.97,
+    "passed": false,
+    "seed": 4,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": false,
+    "seed": 5,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.97,
+    "passed": true,
+    "seed": 6,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": true,
+    "seed": 7,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": true,
+    "seed": 8,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.95,
+    "passed": true,
+    "seed": 9,
+    "val_accuracy": 1.0
+   }
+  ],
+  "protocol-induction|Opus 5": [
+   {
+    "declared_confidence": 0.72,
+    "passed": false,
+    "seed": 0,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.9,
+    "passed": false,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.78,
+    "passed": false,
+    "seed": 10,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 11,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 12,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 13,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.62,
+    "passed": false,
+    "seed": 14,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.72,
+    "passed": true,
+    "seed": 15,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": false,
+    "seed": 16,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.88,
+    "passed": true,
+    "seed": 17,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.75,
+    "passed": true,
+    "seed": 18,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.65,
+    "passed": false,
+    "seed": 19,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 2,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": true,
+    "seed": 4,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.8,
+    "passed": false,
+    "seed": 5,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.88,
+    "passed": true,
+    "seed": 6,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.72,
+    "passed": false,
+    "seed": 7,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.8,
+    "passed": true,
+    "seed": 8,
+    "val_accuracy": 1.0
+   }
+  ],
+  "rule-induction|GPT-5.6 Sol": [
+   {
+    "declared_confidence": 0.91,
+    "passed": false,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": true,
+    "seed": 10,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": false,
+    "seed": 11,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.55,
+    "passed": false,
+    "seed": 12,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": false,
+    "seed": 13,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.18,
+    "passed": false,
+    "seed": 14,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.22,
+    "passed": false,
+    "seed": 15,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.99,
+    "passed": false,
+    "seed": 17,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.58,
+    "passed": false,
+    "seed": 18,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.995,
+    "passed": false,
+    "seed": 2,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.98,
+    "passed": false,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.72,
+    "passed": false,
+    "seed": 4,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.995,
+    "passed": true,
+    "seed": 5,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.995,
+    "passed": false,
+    "seed": 7,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.82,
+    "passed": false,
+    "seed": 8,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.97,
+    "passed": false,
+    "seed": 9,
+    "val_accuracy": 1.0
+   }
+  ],
+  "rule-induction|Opus 5": [
+   {
+    "declared_confidence": 0.72,
+    "passed": true,
+    "seed": 0,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.86,
+    "passed": true,
+    "seed": 1,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.78,
+    "passed": true,
+    "seed": 10,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.45,
+    "passed": true,
+    "seed": 11,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.45,
+    "passed": false,
+    "seed": 12,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.5,
+    "passed": false,
+    "seed": 13,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.78,
+    "passed": true,
+    "seed": 14,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.35,
+    "passed": false,
+    "seed": 15,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.8,
+    "passed": true,
+    "seed": 16,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.6,
+    "passed": true,
+    "seed": 17,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.75,
+    "passed": false,
+    "seed": 18,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.5,
+    "passed": false,
+    "seed": 19,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.55,
+    "passed": false,
+    "seed": 2,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.62,
+    "passed": false,
+    "seed": 3,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.72,
+    "passed": true,
+    "seed": 4,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.45,
+    "passed": true,
+    "seed": 5,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.75,
+    "passed": true,
+    "seed": 6,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.85,
+    "passed": false,
+    "seed": 7,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.55,
+    "passed": true,
+    "seed": 8,
+    "val_accuracy": 1.0
+   },
+   {
+    "declared_confidence": 0.76,
+    "passed": true,
+    "seed": 9,
+    "val_accuracy": 1.0
+   }
+  ]
+ }
+}
