@@ -15,17 +15,17 @@
 
 # Reproducibility data
 
-One directory per Montana Research Foundation preprint. Each is the data
-behind its paper: the aggregate outcome of every rollout, and a
+One directory per preprint, under `experiments/`. Each is the data behind
+its paper: the aggregate outcome of every rollout, and a
 self-contained `verify.py` that recomputes the headline from it. The task
 families, the raw agent transcripts, and the held-out grading data are
 withheld under contamination control (each bundle's `WITHHELD.md`).
 
 | bundle | measures | rollouts |
 |---|---|---|
-| [`MRF-2026-01-acceptance-gauntlet`](MRF-2026-01-acceptance-gauntlet/) | task acceptance and seed calibration | 120 |
-| [`MRF-2026-02-held-out-confidence`](MRF-2026-02-held-out-confidence/) | agent self-knowledge under a held-out criterion | 240 |
-| [`MRF-2026-03-track-label`](MRF-2026-03-track-label/) | an ability label raises the effort of an agent | 400 |
+| [`MRF-2026-01-acceptance-gauntlet`](experiments/MRF-2026-01-acceptance-gauntlet/) | task acceptance and seed calibration | 120 |
+| [`MRF-2026-02-held-out-confidence`](experiments/MRF-2026-02-held-out-confidence/) | agent self-knowledge under a held-out criterion | 240 |
+| [`MRF-2026-03-track-label`](experiments/MRF-2026-03-track-label/) | an ability label raises the effort of an agent | 400 |
 
 ## What each bundle contains
 
@@ -36,6 +36,8 @@ withheld under contamination control (each bundle's `WITHHELD.md`).
   paper has one).
 - `verify.py` — recomputes the per-cell pass rates and intervals from
   `records/` alone, with no task content.
+- `CITATION.cff` — the experiment's citation, carrying its own DOI once
+  minted.
 - `README.md`, `WITHHELD.md`, `LICENSE` (CC BY 4.0), `MANIFEST.sha256`.
 
 The paper's LaTeX source and its figure and table scripts live with the
@@ -49,7 +51,8 @@ The printed rates and intervals match the paper.
 
 ## Release
 
-Staging only. These are prepared for a public release under a founder
-decision; nothing here has been pushed or published. On release, one DOI
-is minted per bundle (Zenodo from a GitHub release) and written into the
-matching preprint's front matter (`\mrfdoi`).
+Each experiment is deposited to Zenodo as its own record, so it carries
+its own DOI. On release, the DOI is written into that experiment's
+`CITATION.cff` and into the matching preprint's front matter
+(`\mrfdoi`). This root `CITATION.cff` describes the collection; cite the
+specific experiment from its own file.

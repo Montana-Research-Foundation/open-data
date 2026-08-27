@@ -1,11 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this data, please cite it as below."
-title: "Montana Research Foundation Open Data: reproducibility bundles for the MRF preprints"
+message: >-
+  This repository is a collection. Cite the specific experiment you use
+  from its own CITATION.cff under experiments/<name>/.
+title: "Montana Research Foundation Open Data"
 abstract: >-
-  Per-rollout aggregate records and a self-contained verification script
-  behind each Montana Research Foundation preprint. Task families, raw agent
-  transcripts, and held-out grading data are withheld under contamination
-  control (see each bundle's WITHHELD.md).
+  Reproducibility data for the Montana Research Foundation preprints: one
+  directory per experiment under experiments/, each with per-rollout
+  aggregate records and a self-contained verification script. Task
+  families, raw agent transcripts, and held-out grading data are withheld
+  under contamination control.
 type: dataset
 authors:
   - given-names: Ricardo
@@ -14,16 +17,9 @@ authors:
   - given-names: Francieli
     family-names: Carra
     affiliation: Montana Research Foundation
-version: "1.0.0"
-date-released: "2026-08-27"
 license: CC-BY-4.0
 url: "https://montanaresearch.org"
 repository-code: "https://github.com/Montana-Research-Foundation/open-data"
 keywords:
   - reproducibility
   - language-model evaluation
-  - held-out criterion
-  - agent benchmarks
-# DOI is minted by Zenodo when a release is cut. Add the concept DOI here
-# once available, then this becomes the preferred citation identifier:
-# doi: 10.5281/zenodo.XXXXXXX

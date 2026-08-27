@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "ATLAS: Adversarial, Traceable, Latent-Criterion, Auditable, and Seed-Calibrated Task Acceptance (MRF-2026-01 reproducibility data)"
+abstract: >-
+  Per-rollout aggregate records and a self-contained verification script
+  behind Montana Research Foundation preprint MRF-2026-01. Task families, raw
+  agent transcripts, and held-out grading data are withheld under
+  contamination control (WITHHELD.md).
+type: dataset
+authors:
+  - given-names: Ricardo
+    family-names: Arcifa
+    affiliation: Montana Research Foundation
+  - given-names: Francieli
+    family-names: Carra
+    affiliation: Montana Research Foundation
+version: "1.0.0"
+date-released: "2026-06-15"
+license: CC-BY-4.0
+url: "https://montanaresearch.org"
+repository-code: "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-01-acceptance-gauntlet"
+keywords:
+  - reproducibility
+  - language-model evaluation
+# This experiment has its own Zenodo deposit and DOI, minted on release.
+# Add the DOI here and in the preprint front matter (MRF-2026-01 make_mrf.py, \mrfdoi):
+# doi: 10.5281/zenodo.XXXXXXX
