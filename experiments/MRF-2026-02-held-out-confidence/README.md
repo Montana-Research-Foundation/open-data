@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="preprint" src="https://img.shields.io/badge/preprint-MRF--2026--02-9184CF"> <img alt="version" src="https://img.shields.io/badge/version-v1-5A5A66"> <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <img alt="DOI" src="https://img.shields.io/badge/DOI-pending-lightgrey"> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-240-B3A8E6">
+  <img alt="preprint" src="https://img.shields.io/badge/preprint-MRF--2026--02-9184CF"> <img alt="version" src="https://img.shields.io/badge/version-v1-5A5A66"> <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <a href="https://doi.org/10.5281/zenodo.22126531"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22126531-9184CF"></a> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-240-B3A8E6">
 </p>
 
 ---

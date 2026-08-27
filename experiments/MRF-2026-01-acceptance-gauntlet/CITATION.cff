@@ -23,5 +23,4 @@ keywords:
   - reproducibility
   - language-model evaluation
 # This experiment has its own Zenodo deposit and DOI, minted on release.
-# Add the DOI here and in the preprint front matter (MRF-2026-01 make_mrf.py, \mrfdoi):
-# doi: 10.5281/zenodo.XXXXXXX
+doi: 10.5281/zenodo.22126529
