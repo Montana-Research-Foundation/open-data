@@ -1,0 +1,43 @@
+{
+  "upload_type": "dataset",
+  "title": "An Ability Label Raises the Effort of an Agent (MRF-2026-03 reproducibility data)",
+  "version": "1.0.0",
+  "publication_date": "2026-08-20",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Arcifa, Ricardo",
+      "affiliation": "Montana Research Foundation"
+    },
+    {
+      "name": "Carra, Francieli",
+      "affiliation": "Montana Research Foundation"
+    }
+  ],
+  "description": "Reproducibility data for Montana Research Foundation preprint MRF-2026-03, \"An Ability Label Raises the Effort of an Agent\": per-rollout aggregate records and a self-contained verify.py that recomputes the paper's headline from the records alone. Task families, raw agent transcripts, and held-out grading data are withheld under contamination control.",
+  "keywords": [
+    "reproducibility",
+    "language-model evaluation",
+    "agent benchmarks",
+    "held-out criterion"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-03-track-label",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/Montana-Research-Foundation/open-data",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://montanaresearch.org",
+      "relation": "isPartOf",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Deposit this experiment as its own Zenodo record. Once the preprint is posted, add its DOI as an isSupplementTo related identifier. Send to the Zenodo API wrapped as {\"metadata\": <this object>}."
+}

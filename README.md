@@ -38,6 +38,7 @@ withheld under contamination control (each bundle's `WITHHELD.md`).
   `records/` alone, with no task content.
 - `CITATION.cff` — the experiment's citation, carrying its own DOI once
   minted.
+- `zenodo.json` — Zenodo deposition metadata for minting that DOI.
 - `README.md`, `WITHHELD.md`, `LICENSE` (CC BY 4.0), `MANIFEST.sha256`.
 
 The paper's LaTeX source and its figure and table scripts live with the
