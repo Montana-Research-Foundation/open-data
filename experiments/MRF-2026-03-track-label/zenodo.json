@@ -38,6 +38,5 @@
       "relation": "isPartOf",
       "scheme": "url"
     }
-  ],
-  "notes": "Deposit this experiment as its own Zenodo record. Once the preprint is posted, add its DOI as an isSupplementTo related identifier. Send to the Zenodo API wrapped as {\"metadata\": <this object>}."
+  ]
 }
