@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <img alt="bundles" src="https://img.shields.io/badge/bundles-3-9184CF"> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-760-B3A8E6"> <img alt="DOI" src="https://img.shields.io/badge/DOI-pending-lightgrey">
+  <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <img alt="bundles" src="https://img.shields.io/badge/bundles-3-9184CF"> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-760-B3A8E6">
 </p>
 
 ---
@@ -55,5 +55,5 @@ The printed rates and intervals match the paper.
 Each experiment is deposited to Zenodo as its own record, so it carries
 its own DOI. On release, the DOI is written into that experiment's
 `CITATION.cff` and into the matching preprint's front matter
-(`\mrfdoi`). This root `CITATION.cff` describes the collection; cite the
-specific experiment from its own file.
+(`\mrfdoi`). Cite each experiment from its own `CITATION.cff`; there is
+no repository-level DOI.
