@@ -16,9 +16,11 @@ minted DOI. In CI the DOIs are written to --out and the step summary instead,
 and a maintainer applies them through the normal issue -> branch -> PR flow.
 """
 import argparse
+import io
 import json
 import os
 import sys
+import zipfile
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -48,15 +50,23 @@ def api(method, url, token, data=None, headers=None):
         sys.exit(f"Zenodo API {method} {url} -> {e.code}: {e.read().decode()[:500]}")
 
 
+def zip_experiment(exp):
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(p for p in exp.rglob("*") if p.is_file()):
+            z.write(f, f"{exp.name}/{f.relative_to(exp).as_posix()}")
+    return buf.getvalue()
+
+
 def deposit_one(exp, token, base_url, publish):
     meta = json.loads((exp / "zenodo.json").read_text())
     dep = api("POST", f"{base_url}/api/deposit/depositions", token, {"metadata": meta})
     dep_id = dep["id"]
     bucket = dep["links"]["bucket"]
-    for f in sorted(p for p in exp.rglob("*") if p.is_file()):
-        rel = f.relative_to(exp).as_posix()
-        api("PUT", f"{bucket}/{rel}", token, data=f.read_bytes(),
-            headers={"Content-Type": "application/octet-stream"})
+    # Zenodo bucket keys are flat (nested paths 404), so upload the whole
+    # experiment as a single zip that preserves its internal structure.
+    api("PUT", f"{bucket}/{exp.name}.zip", token, data=zip_experiment(exp),
+        headers={"Content-Type": "application/octet-stream"})
     prereserved = dep.get("metadata", {}).get("prereserve_doi", {}).get("doi")
     if publish:
         pub = api("POST",
