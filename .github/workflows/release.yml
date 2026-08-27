@@ -1,0 +1,50 @@
+name: release
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Zenodo target"
+        type: choice
+        options: [sandbox, production]
+        default: sandbox
+      publish:
+        description: "Publish the deposit (mints the real DOI; irreversible on production)"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  deposit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate before depositing
+        run: python .github/scripts/validate_release.py
+      - name: Check token is configured
+        env:
+          TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::ZENODO_TOKEN secret is not set. Add it in Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+      - name: Deposit each experiment
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          BASE=https://sandbox.zenodo.org
+          [ "${{ inputs.environment }}" = "production" ] && BASE=https://zenodo.org
+          PUB=""
+          [ "${{ inputs.publish }}" = "true" ] && PUB="--publish"
+          echo "target: $BASE  publish: ${{ inputs.publish }}" >> "$GITHUB_STEP_SUMMARY"
+          python .github/scripts/zenodo_deposit.py --all --base-url "$BASE" $PUB \
+            --summary "$GITHUB_STEP_SUMMARY" --out dois.json
+      - name: Upload DOIs
+        uses: actions/upload-artifact@v4
+        with:
+          name: dois
+          path: dois.json

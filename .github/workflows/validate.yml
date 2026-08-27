@@ -1,0 +1,33 @@
+name: validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  datasets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Validate release (integrity, verify.py, citations, no leaks)
+        run: python .github/scripts/validate_release.py
+  pr-policy:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require a linked issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const text = `${pr.title}\n${pr.body || ''}`;
+            const ok = /#\d+/.test(text) || /\b(clos|fix|resolv)\w*\s+#\d+/i.test(text);
+            if (!ok) core.setFailed(
+              'This PR must reference an issue (e.g. "Closes #12"). ' +
+              'Open an issue first and create the branch from it.');
