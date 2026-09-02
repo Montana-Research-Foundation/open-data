@@ -1,0 +1,2204 @@
+{
+  "values": {
+    "n_designs": {
+      "value": 8,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_fallen": {
+      "value": 8,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_untested": {
+      "value": 0,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_designgap": {
+      "value": 0,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_mechanisms": {
+      "value": 3,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_retired_gate0": {
+      "value": 5,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_retired_probe": {
+      "value": 1,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_retired_argument": {
+      "value": 2,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_retired_measured": {
+      "value": 6,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_built": {
+      "value": 1,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_never_built": {
+      "value": 7,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_probed": {
+      "value": 1,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_never_probed": {
+      "value": 7,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_retracted": {
+      "value": 3,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_control_designs": {
+      "value": 4,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_gate0_families": {
+      "value": 6,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_outside_taxonomy": {
+      "value": 0,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_a_instantiations": {
+      "value": 2,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_a_mechanisms": {
+      "value": 2,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_relay_designs": {
+      "value": 4,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "n_other_designs": {
+      "value": 4,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "the disposition list is maintained in census.py and existence-checked against the two design specs and the gate-0 reports it names"
+    },
+    "retired_gate0_ids": {
+      "value": "G1.4, G2.1, G2.2, G2.3, G2.4",
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "designs retired by a gate-0 measurement"
+    },
+    "n_fallen_instantiations": {
+      "value": 9,
+      "source": "papers/task-design-collapse/census.py",
+      "method": "maintained",
+      "note": "family A fell on two instantiations, counted separately"
+    },
+    "taxonomy_form": {
+      "value": "cover",
+      "source": "papers/task-design-collapse/census.py",
+      "method": "derived",
+      "note": "a cover when a design sits under more than one mechanism (G2.3), a partition otherwise"
+    },
+    "multi_mechanism_ids": {
+      "value": "G2.3",
+      "source": "papers/task-design-collapse/census.py",
+      "method": "derived",
+      "note": "designs the taxonomy places under more than one mechanism"
+    },
+    "flux_ctrl_n": {
+      "value": 12,
+      "source": "reports/data/flux-recipe-control/control_c23_s5.log",
+      "method": "parsed",
+      "note": "episodes in the control run, seeds 2100-2103"
+    },
+    "flux_ctrl_systems": {
+      "value": 4,
+      "source": "reports/data/flux-recipe-control/control_c23_s5.log",
+      "method": "parsed",
+      "note": "distinct sealed systems behind those episodes"
+    },
+    "flux_ctrl_eps_per_system": {
+      "value": 3,
+      "source": "reports/data/flux-recipe-control/control_c23_s5.log",
+      "method": "derived",
+      "note": "episodes per system in the control run"
+    },
+    "flux_ctrl_consistent": {
+      "value": 12,
+      "source": "reports/data/flux-recipe-control/control_c23_s5.log",
+      "method": "parsed",
+      "note": "consistent at every observation"
+    },
+    "flux_ctrl_exact": {
+      "value": 10,
+      "source": "reports/data/flux-recipe-control/control_c23_s5.log",
+      "method": "parsed",
+      "note": "exact true mode timeline"
+    },
+    "flux_ctrl_exact_by_definition": {
+      "value": 10,
+      "source": "reports/data/flux-recipe-control/exact_by_definition_c23_s5.log",
+      "method": "parsed",
+      "note": "episodes exact under the definition of Section 2, re-simulated"
+    },
+    "flux_ctrl_missed_switch_effect": {
+      "value": "3.3e-08",
+      "source": "reports/data/flux-recipe-control/exact_by_definition_c23_s5.log",
+      "method": "derived",
+      "note": "largest movement of an observed cell caused by a switch the recipe missed, against a 2e-5 observation gate"
+    },
+    "f1_recipe_n": {
+      "value": 12,
+      "source": "reports/data/book-depletion-spike/recipe_c23_s5.log",
+      "method": "parsed",
+      "note": "episodes, recipe A"
+    },
+    "f1_recipe_systems": {
+      "value": 4,
+      "source": "reports/data/book-depletion-spike/recipe_c23_s5.log",
+      "method": "parsed",
+      "note": "distinct systems behind those episodes"
+    },
+    "f1_recipe_consistent": {
+      "value": 12,
+      "source": "reports/data/book-depletion-spike/recipe_c23_s5.log",
+      "method": "parsed",
+      "note": ""
+    },
+    "f1_recipe_exact": {
+      "value": 12,
+      "source": "reports/data/book-depletion-spike/recipe_c23_s5.log",
+      "method": "parsed",
+      "note": ""
+    },
+    "f6_n": {
+      "value": 12,
+      "source": "reports/data/venue-chain-spike/f6_c23_s5.log",
+      "method": "parsed",
+      "note": ""
+    },
+    "f6_systems": {
+      "value": 4,
+      "source": "reports/data/venue-chain-spike/f6_c23_s5.log",
+      "method": "parsed",
+      "note": "distinct systems behind those episodes"
+    },
+    "f6_consistent": {
+      "value": 9,
+      "source": "reports/data/venue-chain-spike/f6_c23_s5.log",
+      "method": "parsed",
+      "note": ""
+    },
+    "f6_exact": {
+      "value": 3,
+      "source": "reports/data/venue-chain-spike/f6_c23_s5.log",
+      "method": "parsed",
+      "note": ""
+    },
+    "f6_divergent": {
+      "value": 6,
+      "source": "reports/data/venue-chain-spike/f6_c23_s5.log",
+      "method": "derived",
+      "note": "episodes fitted by a timeline that reproduces every observation and is not the generating one"
+    },
+    "f1_deep_consistent": {
+      "value": 8,
+      "source": "reports/data/book-depletion-spike/REPORT.md:36",
+      "method": "transcribed",
+      "note": "hostile re-observation: 4 deep sensors, cadence 29, ticks withheld"
+    },
+    "f1_deep_exact": {
+      "value": 7,
+      "source": "reports/data/book-depletion-spike/REPORT.md:36",
+      "method": "transcribed",
+      "note": ""
+    },
+    "f1_screens_best": {
+      "value": 153,
+      "source": "reports/data/book-depletion-spike/REPORT.md:21",
+      "method": "transcribed",
+      "note": "seed acceptance at the shipped density"
+    },
+    "f3_episodes": {
+      "value": 120,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "parsed",
+      "note": "systems x episodes per system"
+    },
+    "f3_systems": {
+      "value": 20,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "distinct systems behind those episodes"
+    },
+    "f3_eps_per_system": {
+      "value": 6,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes per system"
+    },
+    "f3_greedy_c23": {
+      "value": 120,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes with exact recovery by A_greedy1 at linear/c23"
+    },
+    "f3_mip_c23": {
+      "value": 120,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes with exact recovery by A_mip at linear/c23"
+    },
+    "f3_l1_c23": {
+      "value": 114,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes with exact recovery by A_l1 at linear/c23"
+    },
+    "f3_greedy_liq": {
+      "value": 120,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes with exact recovery by A_greedy1 at liquidity/c23"
+    },
+    "f3_l1iter_liq": {
+      "value": 40,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "episodes with exact recovery by A_l1_iter at liquidity/c23"
+    },
+    "f3_greedy_mean_s": {
+      "value": 0.023,
+      "source": "reports/data/impact-kernel-spike/results.json",
+      "method": "derived",
+      "note": "mean seconds per episode, greedy at cadence 23"
+    },
+    "f4_recipe_n": {
+      "value": 12,
+      "source": "reports/data/local-vol-spike/recipe.json",
+      "method": "parsed",
+      "note": "seeds 0-3, episodes 0-2"
+    },
+    "f4_recipe_systems": {
+      "value": 4,
+      "source": "reports/data/local-vol-spike/recipe.json",
+      "method": "derived",
+      "note": "distinct systems behind those episodes"
+    },
+    "f4_recipe_exact": {
+      "value": 12,
+      "source": "reports/data/local-vol-spike/recipe.json",
+      "method": "derived",
+      "note": "episodes with an exact recovered timeline"
+    },
+    "f4_seeds": {
+      "value": 12,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "seeds measured for class width"
+    },
+    "f4_grid_size": {
+      "value": 128,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "counter and start-mode grid: two per-mode counters over 1..8 and two start modes"
+    },
+    "f4_grid_median": {
+      "value": 3,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "median consistent assignments of the 128-point counter grid at 2e-5"
+    },
+    "f4_steps_max": {
+      "value": 294,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "worst held-out timeline disagreement across the class at 2e-5"
+    },
+    "f4_seeds_over_flux": {
+      "value": 2,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "seeds exceeding the flux worked example of 71 steps"
+    },
+    "f4_seeds_full_grid_1e3": {
+      "value": 10,
+      "source": "reports/data/local-vol-spike",
+      "method": "derived",
+      "note": "seeds admitting the whole counter grid at a 1e-3 gate"
+    },
+    "flux_worked_steps": {
+      "value": 71,
+      "source": "reports/data/local-vol-spike/REPORT.md:174",
+      "method": "transcribed",
+      "note": "flux worked example, quoted in the F4 comparison"
+    },
+    "a_transversal_coef": {
+      "value": 0.2671,
+      "source": "reports/data/growth-structure-spike/m2c_population.json",
+      "method": "derived",
+      "note": "largest population coefficient of any subset of the determinant map"
+    },
+    "a_parity_sub9_max": {
+      "value": 0.0025,
+      "source": "reports/data/growth-structure-spike/m2c_population.json",
+      "method": "derived",
+      "note": "largest population coefficient of any proper subset of the parity map"
+    },
+    "a_scan_seeds": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m2b_T4000.json",
+      "method": "derived",
+      "note": "seeds in the triple-product scan"
+    },
+    "a_scan_rank1": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m2b_T4000.json",
+      "method": "derived",
+      "note": "seeds whose best transversal ranks first of 17,296 triples"
+    },
+    "a_scan_seconds": {
+      "value": 0.58,
+      "source": "reports/data/growth-structure-spike/REPORT.md:244",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_parity_structures": {
+      "value": 55081169024,
+      "source": "reports/data/growth-structure-spike/m3.json",
+      "method": "parsed",
+      "note": "admissible structures, parity repair"
+    },
+    "a_det_structures": {
+      "value": 3719151684864000,
+      "source": "reports/data/growth-structure-spike/m3.json",
+      "method": "parsed",
+      "note": "admissible structures, determinant"
+    },
+    "a_parity_sets": {
+      "value": 27540584512,
+      "source": "reports/data/growth-structure-spike/m3.json",
+      "method": "parsed",
+      "note": "C(64,9)"
+    },
+    "a_enum_seconds": {
+      "value": 18.91,
+      "source": "reports/data/growth-structure-spike/REPORT.md:277",
+      "method": "transcribed",
+      "note": "wall clock of the completed C(64,9) enumeration on 14 threads"
+    },
+    "a_enum_budget_fraction": {
+      "value": 0.0105,
+      "source": "reports/data/growth-structure-spike/REPORT.md:287",
+      "method": "transcribed",
+      "note": "as a fraction of the 1800 s grading budget"
+    },
+    "a_threads": {
+      "value": 14,
+      "source": "reports/data/growth-structure-spike/REPORT.md:285",
+      "method": "transcribed",
+      "note": "cores the completed enumeration ran on"
+    },
+    "a_enum_bestz": {
+      "value": 35.89,
+      "source": "reports/data/growth-structure-spike/REPORT.md:282",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_enum_bestwrong": {
+      "value": 6.51,
+      "source": "reports/data/growth-structure-spike/REPORT.md:282",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_det_identified": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m1_det.json",
+      "method": "derived",
+      "note": "seeds on which the true structure is identified"
+    },
+    "a_det_seeds": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m1_det.json",
+      "method": "derived",
+      "note": "seeds measured"
+    },
+    "a_det_oracle_ratio": {
+      "value": 0.9984,
+      "source": "reports/data/growth-structure-spike/m1_det.json",
+      "method": "derived",
+      "note": "mean realized growth of the oracle rule over the sealed optimum"
+    },
+    "a_parity_identified": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m1_parity.json",
+      "method": "derived",
+      "note": "seeds on which the true structure is identified"
+    },
+    "a_parity_seeds": {
+      "value": 20,
+      "source": "reports/data/growth-structure-spike/m1_parity.json",
+      "method": "derived",
+      "note": "seeds measured"
+    },
+    "a_parity_oracle_ratio": {
+      "value": 1.0016,
+      "source": "reports/data/growth-structure-spike/m1_parity.json",
+      "method": "derived",
+      "note": "mean realized growth of the oracle rule over the sealed optimum"
+    },
+    "a_selfmint_spreads_det": {
+      "value": 9.26,
+      "source": "reports/data/growth-structure-spike/REPORT.md:476",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_noise_gap_det": {
+      "value": 13.34,
+      "source": "reports/data/growth-structure-spike/REPORT.md:525",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_noise_gap_parity": {
+      "value": 37.65,
+      "source": "reports/data/growth-structure-spike/REPORT.md:526",
+      "method": "transcribed",
+      "note": ""
+    },
+    "a_scaled_note": {
+      "value": 1,
+      "source": "reports/data/growth-structure-spike/REPORT.md:294",
+      "method": "transcribed",
+      "note": "every projected row scales a measured single-core rate by a measured speedup"
+    },
+    "b_class_size": {
+      "value": 11606400,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "parsed",
+      "note": "members of the disclosed venue class"
+    },
+    "b_solver_spread_max": {
+      "value": 6.02,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "largest disagreement across the solver ensemble, per cent of the optimum"
+    },
+    "b_solver_families": {
+      "value": 3,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "algorithm families in the reference ensemble, grouping the grid resolutions of the dynamic program and the seeds of the iterated local search"
+    },
+    "b_solver_configs": {
+      "value": 7,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "solver configurations in the reference ensemble, the union over the sealed venues"
+    },
+    "b_solver_configs_base": {
+      "value": 6,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "solver configurations run on every sealed venue, the intersection"
+    },
+    "b_solver_extra_venues": {
+      "value": 1,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues carrying the specialised exponential-kernel solver, which produces the optimum on each of them"
+    },
+    "b_correct_min": {
+      "value": 1.26,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "best correct method, excess over the optimum"
+    },
+    "b_correct_med": {
+      "value": 6.86,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "median over 12 sealed venues"
+    },
+    "b_correct_max": {
+      "value": 22.57,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "worst over 12 sealed venues"
+    },
+    "b_twap_min": {
+      "value": 3.25,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "smallest TWAP excess over the 12 sealed venues"
+    },
+    "b_band": {
+      "value": 25.0,
+      "source": "reports/data/execution-design-spike/REPORT.md:235",
+      "method": "transcribed",
+      "note": "the band stated by the spike report, above the 22.6 per cent measurement 1 requires"
+    },
+    "b_fail_twap": {
+      "value": 4,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues on which twap exceeds the 25 per cent band"
+    },
+    "b_fail_vwap": {
+      "value": 5,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues on which vwap exceeds the 25 per cent band"
+    },
+    "b_fail_ac": {
+      "value": 9,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues on which ac exceeds the 25 per cent band"
+    },
+    "b_fail_ow_linear": {
+      "value": 6,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues on which ow_linear exceeds the 25 per cent band"
+    },
+    "b_fail_myopic_true": {
+      "value": 1,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues on which myopic_true exceeds the 25 per cent band"
+    },
+    "b_selfmint_med": {
+      "value": 9.94,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "family-tuned open-loop schedule, median excess"
+    },
+    "b_selfmint_inband": {
+      "value": 8,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues where the family-tuned schedule is inside the band"
+    },
+    "b_selfmint_beats": {
+      "value": 5,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues where it beats the best probing policy"
+    },
+    "b_n_venues": {
+      "value": 12,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues"
+    },
+    "b_selfmint_inband_lo": {
+      "value": 8,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues inside a 20 per cent band for the family-tuned schedule"
+    },
+    "b_selfmint_inband_req": {
+      "value": 8,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues inside a 22.6 per cent band for the family-tuned schedule"
+    },
+    "b_selfmint_inband_std": {
+      "value": 8,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "sealed venues inside a 25 per cent band for the family-tuned schedule"
+    },
+    "b_selfmint_bands": {
+      "value": "20, 22.6, and 25",
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "the three band widths the self-minting count is invariant across"
+    },
+    "b_design_premium_med": {
+      "value": -2.46,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "median of (flat round 1 excess minus designed probe excess), percentage points"
+    },
+    "b_class_min": {
+      "value": 1,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "smallest consistent class after an admissible round 1, exact fills plus snapshot"
+    },
+    "b_class_max": {
+      "value": 3,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "largest such class"
+    },
+    "b_class_twap_max": {
+      "value": 12,
+      "source": "reports/data/execution-design-spike/results2.json",
+      "method": "derived",
+      "note": "largest consistent class after a flat round 1"
+    },
+    "b_enum_seconds": {
+      "value": 0.06,
+      "source": "reports/data/execution-design-spike/REPORT.md:267",
+      "method": "transcribed",
+      "note": ""
+    },
+    "b_band_required": {
+      "value": 22.6,
+      "source": "reports/data/execution-design-spike/REPORT.md:230",
+      "method": "transcribed",
+      "note": "smallest band admitting every correct method on every sealed venue"
+    },
+    "c_band": {
+      "value": 196,
+      "source": "reports/data/arb-surface-spike/m2_oracles.json",
+      "method": "derived",
+      "note": "tightest band admitting both correct methods, vol bp, rounded up"
+    },
+    "c_n_surfaces": {
+      "value": 12,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "sealed surfaces"
+    },
+    "c_collapse_med": {
+      "value": 3.16,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "cold-start class fit, median held-out implied-vol error in vol bp"
+    },
+    "c_collapse_max": {
+      "value": 18.87,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "worst surface"
+    },
+    "c_collapse_exact": {
+      "value": 5,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "surfaces the cold-start fit recovers to numerical zero"
+    },
+    "c_msel_matches": {
+      "value": 5,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "surfaces on which the freely selected component count equals the sealed one"
+    },
+    "c_svi_inband": {
+      "value": 12,
+      "source": "reports/data/arb-surface-spike/m1_defaults.json",
+      "method": "derived",
+      "note": "surfaces on which the SVI default is inside the band"
+    },
+    "c_svi_beats_oracle": {
+      "value": 11,
+      "source": "reports/data/arb-surface-spike/m1_defaults.json",
+      "method": "derived",
+      "note": "surfaces on which the SVI default has lower held-out error than the constraint-respecting method"
+    },
+    "c_ssvi_inband": {
+      "value": 9,
+      "source": "reports/data/arb-surface-spike/m4_ssvi.json",
+      "method": "derived",
+      "note": "surfaces on which textbook SSVI is inside the band"
+    },
+    "c_ssvi_cert_clean": {
+      "value": 12,
+      "source": "reports/data/arb-surface-spike/m4_ssvi.json",
+      "method": "derived",
+      "note": "surfaces on which SSVI satisfies both no-arbitrage certificates"
+    },
+    "c_spline_cert_fail": {
+      "value": 12,
+      "source": "reports/data/arb-surface-spike/m1_defaults.json",
+      "method": "derived",
+      "note": "surfaces on which the spline default violates a certificate"
+    },
+    "c_lp_vis_lo": {
+      "value": 356,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "narrowest median bound width at held-out strikes on quoted maturities, vol bp"
+    },
+    "c_lp_vis_hi": {
+      "value": 1021,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "widest such median"
+    },
+    "c_lp_mis_lo": {
+      "value": 770,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "narrowest median at the missing maturities"
+    },
+    "c_lp_mis_hi": {
+      "value": 1411,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "widest such median"
+    },
+    "c_lp_inside": {
+      "value": 576,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "held-out points at which the sealed truth lies inside the computed bounds"
+    },
+    "c_lp_points": {
+      "value": 576,
+      "source": "reports/data/arb-surface-spike/m5_ambiguity.json",
+      "method": "derived",
+      "note": "held-out points tested"
+    },
+    "d_seeds": {
+      "value": 20,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "seeds the gate-0 spike measured"
+    },
+    "d_visible_labels": {
+      "value": 1200,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "graded steps the agent sees, per seed"
+    },
+    "d_sealed_labels": {
+      "value": 1600,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "graded steps on the sealed histories, per seed"
+    },
+    "d_oracle_recovered": {
+      "value": 2,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "seeds on which the privileged synthesis recovers the generating cascade"
+    },
+    "d_oracle_visible_med": {
+      "value": "0.962",
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "median visible agreement of the privileged synthesis"
+    },
+    "d_oracle_sealed_med": {
+      "value": "0.896",
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "median sealed agreement of the privileged synthesis"
+    },
+    "d_oracle_true_sealed": {
+      "value": 20,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which the generating cascade reproduces the sealed path exactly"
+    },
+    "d_identifiable": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "seeds on which the visible labels determine the sealed position path"
+    },
+    "d_consistent_cascades": {
+      "value": 72294,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "distinct cascades found that agree with every visible label, over all seeds"
+    },
+    "d_divergent_cascades": {
+      "value": 36846,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "of those, the ones inducing a different sealed position path"
+    },
+    "d_divergent_min": {
+      "value": 83,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "fewest such cascades found on any one seed"
+    },
+    "d_min_sealed": {
+      "value": "0.827",
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "lowest sealed agreement among the visible-consistent cascades"
+    },
+    "d_probe_seconds": {
+      "value": 600,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "search budget of the identifiability probe, seconds per seed"
+    },
+    "d_probe_evals_lo": {
+      "value": 170864,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "fewest candidate evaluations the probe made on any seed"
+    },
+    "d_probe_evals_hi": {
+      "value": 269581,
+      "source": "reports/data/strategy-rule-spike/out/m1m2",
+      "method": "derived",
+      "note": "most candidate evaluations the probe made on any seed"
+    },
+    "d_grammar_atoms": {
+      "value": 1448,
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "parsed",
+      "note": "atoms of the disclosed grammar"
+    },
+    "d_grammar_cascades": {
+      "value": "4.265e+53",
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "derived",
+      "note": "cascades of four to seven clauses admitted by the disclosed grammar"
+    },
+    "d_grammar_bits": {
+      "value": "178.2",
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "derived",
+      "note": "the same count as a power of two"
+    },
+    "d_check_ms": {
+      "value": "1.873",
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "derived",
+      "note": "measured cost of checking one candidate against every visible label, milliseconds"
+    },
+    "d_enum_seconds": {
+      "value": "7.99e+50",
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "derived",
+      "note": "seconds a full enumeration of the grammar would take at that rate"
+    },
+    "d_enum_budget_ratio": {
+      "value": "4.4e+47",
+      "source": "reports/data/strategy-rule-spike/out/m3_count.json",
+      "method": "derived",
+      "note": "that enumeration as a multiple of the 1800-second grading budget"
+    },
+    "d_majority": {
+      "value": "0.472",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed majority baseline, the rate of always emitting the commonest label"
+    },
+    "d_tree_visible_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R1_tree reproduces every visible label"
+    },
+    "d_tree_sealed_med": {
+      "value": "0.549",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of R1_tree"
+    },
+    "d_tree_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R1_tree reproduces the sealed position path exactly"
+    },
+    "d_boost_visible_solved": {
+      "value": 20,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R2_boost reproduces every visible label"
+    },
+    "d_boost_sealed_med": {
+      "value": "0.663",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of R2_boost"
+    },
+    "d_boost_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R2_boost reproduces the sealed position path exactly"
+    },
+    "d_boost_oracle_visible_solved": {
+      "value": 20,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R2_boost_oracle_state reproduces every visible label"
+    },
+    "d_boost_oracle_sealed_med": {
+      "value": "0.741",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of R2_boost_oracle_state"
+    },
+    "d_boost_oracle_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R2_boost_oracle_state reproduces the sealed position path exactly"
+    },
+    "d_greedy_visible_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R3_greedy_cascade reproduces every visible label"
+    },
+    "d_greedy_sealed_med": {
+      "value": "0.576",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of R3_greedy_cascade"
+    },
+    "d_greedy_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R3_greedy_cascade reproduces the sealed position path exactly"
+    },
+    "d_program_visible_solved": {
+      "value": 9,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R4_program_search reproduces every visible label"
+    },
+    "d_program_sealed_med": {
+      "value": "0.934",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of R4_program_search"
+    },
+    "d_program_solved": {
+      "value": 5,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "seeds on which R4_program_search reproduces the sealed position path exactly"
+    },
+    "d_control_n": {
+      "value": 5,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "development seeds of the precedence form the control ran on"
+    },
+    "d_control_tree_visible_solved": {
+      "value": 2,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R1_tree reproduces every visible label"
+    },
+    "d_control_tree_sealed_med": {
+      "value": "0.750",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "median sealed agreement of R1_tree on the control"
+    },
+    "d_control_tree_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R1_tree reproduces the held-out labels exactly"
+    },
+    "d_control_boost_visible_solved": {
+      "value": 5,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R2_boost reproduces every visible label"
+    },
+    "d_control_boost_sealed_med": {
+      "value": "0.865",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "median sealed agreement of R2_boost on the control"
+    },
+    "d_control_boost_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R2_boost reproduces the held-out labels exactly"
+    },
+    "d_control_greedy_visible_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R3_greedy_cascade reproduces every visible label"
+    },
+    "d_control_greedy_sealed_med": {
+      "value": "0.640",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "median sealed agreement of R3_greedy_cascade on the control"
+    },
+    "d_control_greedy_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R3_greedy_cascade reproduces the held-out labels exactly"
+    },
+    "d_control_program_visible_solved": {
+      "value": 5,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R4_program_search reproduces every visible label"
+    },
+    "d_control_program_sealed_med": {
+      "value": "0.960",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "median sealed agreement of R4_program_search on the control"
+    },
+    "d_control_program_solved": {
+      "value": 0,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "control seeds on which R4_program_search reproduces the held-out labels exactly"
+    },
+    "d_control_program_lo": {
+      "value": "0.915",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "lowest held-out agreement the bounded program search reaches on the control"
+    },
+    "d_control_program_hi": {
+      "value": "0.975",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "highest held-out agreement it reaches on the control, still short of exact"
+    },
+    "d_control_majority": {
+      "value": "0.360",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "median majority baseline of the control, the rate of always emitting the commonest label there"
+    },
+    "d_program_evals_lo": {
+      "value": 13127,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "fewest candidate evaluations the bounded program search made on any design D seed"
+    },
+    "d_program_evals_hi": {
+      "value": 671280,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "most it made on any design D seed"
+    },
+    "d_program_at_budget": {
+      "value": 11,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "design D seeds on which the search ran to the full budget rather than terminating"
+    },
+    "d_control_search_lo": {
+      "value": 36,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "shortest wall time the same search took before terminating on a control seed"
+    },
+    "d_control_search_hi": {
+      "value": 589,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "longest such wall time on a control seed"
+    },
+    "d_control_evals_lo": {
+      "value": 785512,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "fewest candidate evaluations it made on any control seed"
+    },
+    "d_control_evals_hi": {
+      "value": 15560845,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "most it made on any control seed"
+    },
+    "d_mint_rows": {
+      "value": 160000,
+      "source": "reports/data/strategy-rule-spike/out/m5/poolA_seq.json",
+      "method": "parsed",
+      "note": "rows pooled from 200 minted cascades to fit the general inducer"
+    },
+    "d_mint_pooled": {
+      "value": "0.463",
+      "source": "reports/data/strategy-rule-spike/out/m5/poolA_seq.json",
+      "method": "derived",
+      "note": "median sealed agreement of the pooled inducer on design D"
+    },
+    "d_mint_control": {
+      "value": "0.800",
+      "source": "reports/data/strategy-rule-spike/out/m5/poolA_ctrl.json",
+      "method": "derived",
+      "note": "median sealed agreement of the same inducer on the control"
+    },
+    "d_prior_n": {
+      "value": 12,
+      "source": "reports/data/strategy-rule-spike/out/m5",
+      "method": "derived",
+      "note": "seeds the prior-guided search was run on"
+    },
+    "d_prior_recall": {
+      "value": "0.46",
+      "source": "reports/data/strategy-rule-spike/out/m5",
+      "method": "derived",
+      "note": "median share of the features a cascade uses that the learned prior ranks in its top twelve"
+    },
+    "d_prior_guided_med": {
+      "value": "0.821",
+      "source": "reports/data/strategy-rule-spike/out/m5",
+      "method": "derived",
+      "note": "median sealed agreement of the prior-guided search"
+    },
+    "d_prior_unguided_med": {
+      "value": "0.937",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median sealed agreement of the unguided search at the same checkpoint"
+    },
+    "d_prior_worse": {
+      "value": 12,
+      "source": "reports/data/strategy-rule-spike/out/m5",
+      "method": "derived",
+      "note": "seeds on which restricting the search to the prior makes it worse"
+    },
+    "d_cv_gap": {
+      "value": "-0.073",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "median of (cross-validated estimate minus sealed agreement) for the program search"
+    },
+    "d_cv_gap_control": {
+      "value": "-0.057",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "the same quantity on the control"
+    },
+    "d_cv_gap_positive": {
+      "value": 4,
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "design D seeds on which the per-seed gap runs the unsafe way despite the median"
+    },
+    "d_prior_topk": {
+      "value": 12,
+      "source": "reports/data/strategy-rule-spike/out/m5",
+      "method": "derived",
+      "note": "features the prior-guided search was allowed to propose atoms from"
+    },
+    "d_recipes_more_resistant": {
+      "value": 5,
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "recipe statistics on which design D leaves the smaller margin over its own majority baseline than the control leaves over the control baseline"
+    },
+    "d_over_baseline_lo": {
+      "value": "-0.009",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "smallest margin over the majority baseline any of the five recipes reaches on design D"
+    },
+    "d_over_baseline_hi": {
+      "value": "0.463",
+      "source": "reports/data/strategy-rule-spike/out/m4",
+      "method": "derived",
+      "note": "largest such margin on design D"
+    },
+    "d_control_over_baseline_lo": {
+      "value": "0.280",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "smallest margin over the majority baseline the same five recipes reach on the control"
+    },
+    "d_control_over_baseline_hi": {
+      "value": "0.600",
+      "source": "reports/data/strategy-rule-spike/out/m6",
+      "method": "derived",
+      "note": "largest such margin on the control"
+    },
+    "d_search_budget": {
+      "value": 1800,
+      "source": "reports/data/strategy-rule-spike/REPORT.md:273",
+      "method": "transcribed",
+      "note": "seconds per seed the frontier recipes were given, on the design and on the control alike"
+    },
+    "d_control_parameters": {
+      "value": 7,
+      "source": "reports/data/strategy-rule-spike/REPORT.md:572",
+      "method": "transcribed",
+      "note": "hidden parameters of the precedence form the control runs on"
+    },
+    "d_mint_cascades": {
+      "value": 200,
+      "source": "reports/data/strategy-rule-spike/REPORT.md:415",
+      "method": "transcribed",
+      "note": "cascades minted from the disclosed grammar and pooled to fit the general inducer of measurement 5"
+    },
+    "d_a7_sampled": {
+      "value": 7741,
+      "source": "reports/data/strategy-rule-spike/REPORT.md:155",
+      "method": "transcribed",
+      "note": "cascades sampled under the exhaustive mutation form of the load-bearing assertion, none of which passed it"
+    },
+    "probe_trials": {
+      "value": 2,
+      "source": "reports/data/book-depletion-inversion/probe-1/2026-08-28__01-10-48/result.json",
+      "method": "parsed",
+      "note": "rollouts in the probe"
+    },
+    "probe_cost": {
+      "value": 72.28,
+      "source": "reports/data/book-depletion-inversion/probe-1/2026-08-28__01-10-48/result.json",
+      "method": "parsed",
+      "note": "USD of subscription usage"
+    },
+    "probe_passes": {
+      "value": 1,
+      "source": "reports/data/book-depletion-inversion/probe-1/2026-08-28__01-10-48/result.json",
+      "method": "derived",
+      "note": "rollouts at reward 1.0"
+    },
+    "probe_errored": {
+      "value": 1,
+      "source": "reports/data/book-depletion-inversion/probe-1/2026-08-28__01-10-48/result.json",
+      "method": "parsed",
+      "note": "trials carrying a recorded exception"
+    },
+    "probe_exception": {
+      "value": "VerifierTimeoutError",
+      "source": "reports/data/book-depletion-inversion/probe-1/2026-08-28__01-10-48/result.json",
+      "method": "parsed",
+      "note": "the exception recorded against that trial"
+    },
+    "probe_checks": {
+      "value": 161,
+      "source": "reports/2026-08-28-book-depletion-probe.md:20",
+      "method": "transcribed",
+      "note": "graded checks on the passing rollout"
+    },
+    "probe_pass_cost": {
+      "value": 37.94,
+      "source": "reports/2026-08-28-book-depletion-probe.md:20",
+      "method": "transcribed",
+      "note": ""
+    },
+    "probe_fail_cost": {
+      "value": 34.34,
+      "source": "reports/2026-08-28-book-depletion-probe.md:21",
+      "method": "transcribed",
+      "note": ""
+    },
+    "probe_verifier_budget": {
+      "value": 1800,
+      "source": "reports/2026-08-28-book-depletion-probe.md:21",
+      "method": "transcribed",
+      "note": "disclosed grading budget"
+    },
+    "shortcut_form_t": {
+      "value": "1 min 44 s",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2qr2E83.md:358",
+      "method": "transcribed",
+      "note": "deposition form recovered"
+    },
+    "shortcut_meter_t": {
+      "value": "2 min 08 s",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2qr2E83.md:359",
+      "method": "transcribed",
+      "note": "meter fraction recovered"
+    },
+    "shortcut_timeline_t": {
+      "value": "2 min 51 s",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2qr2E83.md:360",
+      "method": "transcribed",
+      "note": "development mode timeline recovered"
+    },
+    "shortcut_compute_s": {
+      "value": 0.193,
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2qr2E83.md:360",
+      "method": "transcribed",
+      "note": "compute spent on the timeline recovery"
+    },
+    "shortcut_stage1_hi": {
+      "value": 0.48,
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2qr2E83.md:367",
+      "method": "transcribed",
+      "note": "stage-1 seconds per sealed system"
+    },
+    "probe_pass_wall": {
+      "value": "2 h 42 min",
+      "source": "reports/2026-08-28-book-depletion-probe.md:20",
+      "method": "transcribed",
+      "note": ""
+    },
+    "probe_fail_wall": {
+      "value": "3 h 07 min",
+      "source": "reports/2026-08-28-book-depletion-probe.md:21",
+      "method": "transcribed",
+      "note": ""
+    },
+    "fail_sys1_seconds": {
+      "value": 1287.7,
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:310",
+      "method": "transcribed",
+      "note": "measured cost of sealed system 1 alone"
+    },
+    "fail_floor_seconds": {
+      "value": 3540,
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:570",
+      "method": "transcribed",
+      "note": "measured floor for the seven systems"
+    },
+    "fail_ell_error": {
+      "value": "2.2e-9",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:524",
+      "method": "transcribed",
+      "note": "error of the converged length scale"
+    },
+    "fail_residual": {
+      "value": "1.906e-07",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:526",
+      "method": "transcribed",
+      "note": "visible residual against a 2e-5 gate"
+    },
+    "f1_oracle_checks": {
+      "value": 161,
+      "source": "reports/data/book-depletion-inversion/referee-report.md:36",
+      "method": "transcribed",
+      "note": "oracle through the real harness"
+    },
+    "f1_verifier_wall": {
+      "value": 370.6,
+      "source": "reports/data/book-depletion-inversion/referee-report.md:36",
+      "method": "transcribed",
+      "note": ""
+    },
+    "f1_similarity": {
+      "value": 78,
+      "source": "reports/data/book-depletion-inversion/referee-report.md:38",
+      "method": "transcribed",
+      "note": "instruction similarity against an 80 per cent threshold"
+    },
+    "f1_ref_fit_total": {
+      "value": 364,
+      "source": "reports/data/book-depletion-inversion/sdd-ledger.md",
+      "method": "derived",
+      "note": "sum of the seven in-container per-system reference fits recorded on the ledger line"
+    },
+    "t2_channel_t": {
+      "value": "3 min 56 s",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:156",
+      "method": "transcribed",
+      "note": "second rollout reaches the same channel"
+    },
+    "t2_exact_t": {
+      "value": "6 min 28 s",
+      "source": "reports/data/book-depletion-inversion/probe-1/probe-audit-2GTafRv.md:167",
+      "method": "transcribed",
+      "note": "second rollout pins form, meter and switch step"
+    },
+    "rule_gpt_pass": {
+      "value": 1,
+      "source": "papers/acceptance-gauntlet/figures/data/panel.json",
+      "method": "derived",
+      "note": "graded rollouts at full reward for GPT-5.6 Sol on rule-induction; the family is graded all-or-nothing on exact generalization, so the >= 0.5 cut and full reward select the same rollouts"
+    },
+    "rule_gpt_n": {
+      "value": 20,
+      "source": "papers/acceptance-gauntlet/figures/data/panel.json",
+      "method": "derived",
+      "note": "graded rollouts for GPT-5.6 Sol"
+    },
+    "rule_opus_pass": {
+      "value": 5,
+      "source": "papers/acceptance-gauntlet/figures/data/panel.json",
+      "method": "derived",
+      "note": "graded rollouts at full reward for Opus 5 on rule-induction; the family is graded all-or-nothing on exact generalization, so the >= 0.5 cut and full reward select the same rollouts"
+    },
+    "rule_opus_n": {
+      "value": 20,
+      "source": "papers/acceptance-gauntlet/figures/data/panel.json",
+      "method": "derived",
+      "note": "graded rollouts for Opus 5"
+    },
+    "flux_local_pass": {
+      "value": 2,
+      "source": "reports/2026-08-20-traffic-flux-hardening-reply.md:7",
+      "method": "transcribed",
+      "note": "hardened family, local rollouts at the 5 h budget"
+    },
+    "flux_local_n": {
+      "value": 5,
+      "source": "reports/2026-08-20-traffic-flux-hardening-reply.md:7",
+      "method": "transcribed",
+      "note": ""
+    },
+    "flux_ci_pass": {
+      "value": 1,
+      "source": "reports/2026-08-20-traffic-flux-hardening-reply.md:7",
+      "method": "transcribed",
+      "note": ""
+    },
+    "flux_ci_n": {
+      "value": 3,
+      "source": "reports/2026-08-20-traffic-flux-hardening-reply.md:7",
+      "method": "transcribed",
+      "note": ""
+    },
+    "flux_ci_eqv_other": {
+      "value": 2,
+      "source": "reports/2026-08-20-traffic-flux-hardening-reply.md",
+      "method": "derived",
+      "note": "local rollouts run at the default agent settings rather than the continuous-integration settings"
+    },
+    "flux_ci_codex": {
+      "value": 0,
+      "source": "reports/2026-08-20-traffic-flux-ci-hardened-run-reply.md:1",
+      "method": "transcribed",
+      "note": ""
+    },
+    "flux_ci_truncation": {
+      "value": 150,
+      "source": "reports/2026-08-20-traffic-flux-ci-hardened-run-reply.md:1",
+      "method": "transcribed",
+      "note": "workspace quota truncated every claude trial in that run"
+    },
+    "flux_ci_budget_minutes": {
+      "value": 300,
+      "source": "reports/2026-08-20-traffic-flux-ci-hardened-run-reply.md:1",
+      "method": "transcribed",
+      "note": "agent budget of that continuous-integration run, minutes"
+    },
+    "dark_station_minutes": {
+      "value": "10m47s",
+      "source": "reports/2026-08-12-traffic-flux-clamm-kill-record.md:92",
+      "method": "transcribed",
+      "note": "the successor family solved on its first valid rollout"
+    },
+    "tbs_prs": {
+      "value": 27,
+      "source": "reports/2026-08-12-tbs-approved-task-difficulty-survey.md",
+      "method": "derived",
+      "note": "merged task pull requests enumerated in the survey body, counted from the list"
+    },
+    "tbs_modal_rate": {
+      "value": 0,
+      "source": "reports/2026-08-12-tbs-approved-task-difficulty-survey.md:17",
+      "method": "transcribed",
+      "note": "modal frontier pass rate over the merged set"
+    },
+    "tbs_band_hi": {
+      "value": 33,
+      "source": "reports/2026-08-12-tbs-approved-task-difficulty-survey.md:19",
+      "method": "transcribed",
+      "note": "upper edge of the accepted pass-rate band"
+    },
+    "gate0_spend": {
+      "value": 0,
+      "source": "specs/2026-08-27-quant-inverse-families-candidates.md:353",
+      "method": "transcribed",
+      "note": "gate-0 measurements ran locally"
+    },
+    "b_pass1_gap": {
+      "value": 4.7,
+      "source": "reports/data/execution-design-spike/REPORT.md:90",
+      "method": "transcribed",
+      "note": "a dynamic program beat the superseded reference optimum by this much on one venue"
+    },
+    "a_triples": {
+      "value": 17296,
+      "source": "reports/data/growth-structure-spike/REPORT.md:250",
+      "method": "transcribed",
+      "note": "C(48,3) triples scanned"
+    },
+    "dark_station_instances": {
+      "value": 70,
+      "source": "reports/2026-08-12-traffic-flux-clamm-kill-record.md:98",
+      "method": "transcribed",
+      "note": "instances the successor family solver was fuzz-hardened over; the source records 70+, so this value is a lower bound and the prose says so"
+    },
+    "probe_five_pass": {
+      "value": 1,
+      "source": "reports/2026-08-03-deepened-calibration-n20.md:14",
+      "method": "transcribed",
+      "note": "the family approved on a five-rollout probe"
+    },
+    "probe_five_n": {
+      "value": 5,
+      "source": "reports/2026-08-03-deepened-calibration-n20.md:14",
+      "method": "transcribed",
+      "note": ""
+    },
+    "probe_deep_pass": {
+      "value": 11,
+      "source": "reports/2026-08-03-deepened-calibration-n20.md:14",
+      "method": "transcribed",
+      "note": "the same family at the standard sample size"
+    },
+    "probe_deep_n": {
+      "value": 20,
+      "source": "reports/2026-08-03-deepened-calibration-n20.md:14",
+      "method": "transcribed",
+      "note": ""
+    },
+    "c_separating_interval": {
+      "value": 7.0,
+      "source": "reports/data/arb-surface-spike/REPORT.md:342",
+      "method": "transcribed",
+      "note": "upper edge of the open interval that separates the sealed surface from the best default; the source states that no alternative correct method reaches it, so it cannot be calibrated as a band"
+    },
+    "c_collapse_below_sep": {
+      "value": 8,
+      "source": "reports/data/arb-surface-spike/m3_collapse_tick0.0.json",
+      "method": "derived",
+      "note": "surfaces the cold-start fit recovers inside the separating interval"
+    },
+    "f1_nometer_systems": {
+      "value": 5,
+      "source": "reports/data/book-depletion-inversion/sdd-ledger.md:93",
+      "method": "transcribed",
+      "note": "systems whose held-out gate a non-metering controller passes"
+    },
+    "f1_rowzero_systems": {
+      "value": 6,
+      "source": "reports/data/book-depletion-inversion/sdd-ledger.md:93",
+      "method": "transcribed",
+      "note": "systems whose deposition form is recoverable from the first row"
+    },
+    "f1_systems": {
+      "value": 7,
+      "source": "reports/data/book-depletion-inversion/sdd-ledger.md:93",
+      "method": "transcribed",
+      "note": "systems in the shipped task"
+    },
+    "f1_sealed_systems": {
+      "value": 6,
+      "source": "reports/data/book-depletion-inversion/sdd-ledger.md",
+      "method": "derived",
+      "note": "the shipped systems less the disclosed development system, which the agent holds and the audit re-ran the submitted stage against separately"
+    },
+    "probe_agent_budget": {
+      "value": 18000,
+      "source": "reports/2026-08-28-book-depletion-probe.md:9",
+      "method": "transcribed",
+      "note": "agent budget of the probe, seconds"
+    },
+    "rule_seed_two_records": {
+      "value": 171,
+      "source": "reports/2026-08-01-rule-induction-calibration.md:27",
+      "method": "transcribed",
+      "note": "held-out records on the closest failure of the reference family, five-seed table"
+    }
+  },
+  "series": {
+    "designs": [
+      {
+        "id": "F1",
+        "paper_id": "G1.1",
+        "name": "book-depletion-inversion",
+        "disposition": "fell",
+        "retired_by": "probe",
+        "report": "reports/data/book-depletion-spike/REPORT.md",
+        "spike": "book-depletion-spike",
+        "built": true,
+        "build_record": "reports/data/book-depletion-inversion/referee-report.md"
+      },
+      {
+        "id": "F3",
+        "paper_id": "G1.2",
+        "name": "impact-kernel-inversion",
+        "disposition": "fell",
+        "retired_by": "argument",
+        "report": "reports/data/impact-kernel-spike/REPORT.md",
+        "spike": "impact-kernel-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "F4",
+        "paper_id": "G1.3",
+        "name": "local-vol-policy-inversion",
+        "disposition": "fell",
+        "retired_by": "argument",
+        "report": "reports/data/local-vol-spike/REPORT.md",
+        "spike": "local-vol-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "F6",
+        "paper_id": "G1.4",
+        "name": "venue-chain",
+        "disposition": "fell",
+        "retired_by": "gate-0",
+        "report": "reports/data/venue-chain-spike/REPORT.md",
+        "spike": "venue-chain-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "A",
+        "paper_id": "G2.1",
+        "name": "growth-optimal-structure",
+        "disposition": "fell",
+        "retired_by": "gate-0",
+        "report": "reports/data/growth-structure-spike/REPORT.md",
+        "spike": "growth-structure-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "B",
+        "paper_id": "G2.2",
+        "name": "execution-design",
+        "disposition": "fell",
+        "retired_by": "gate-0",
+        "report": "reports/data/execution-design-spike/REPORT.md",
+        "spike": "execution-design-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "C",
+        "paper_id": "G2.3",
+        "name": "arbitrage-free-surface",
+        "disposition": "fell",
+        "retired_by": "gate-0",
+        "report": "reports/data/arb-surface-spike/REPORT.md",
+        "spike": "arb-surface-spike",
+        "built": false,
+        "build_record": null
+      },
+      {
+        "id": "D",
+        "paper_id": "G2.4",
+        "name": "strategy-rule-induction",
+        "disposition": "fell",
+        "retired_by": "gate-0",
+        "report": "reports/data/strategy-rule-spike/REPORT.md",
+        "spike": "strategy-rule-spike",
+        "built": false,
+        "build_record": null
+      }
+    ],
+    "anon_names": {
+      "book-depletion-inversion": "withheld",
+      "strategy-rule-induction": "sequential-strategy induction"
+    },
+    "mechanisms": [
+      {
+        "name": "single-space readability",
+        "designs": [
+          "F1",
+          "F3",
+          "F4",
+          "A-determinant"
+        ]
+      },
+      {
+        "name": "disclosed-class recoverability",
+        "designs": [
+          "C",
+          "A-parity",
+          "B"
+        ]
+      },
+      {
+        "name": "constraint-set target",
+        "designs": [
+          "C",
+          "F6",
+          "D"
+        ]
+      }
+    ],
+    "recipe_control": [
+      {
+        "family": "G1.1 book depletion",
+        "n": 12,
+        "systems": 4,
+        "exact": 12
+      },
+      {
+        "family": "G1.2 impact kernel",
+        "n": 120,
+        "systems": 20,
+        "exact": 120
+      },
+      {
+        "family": "G1.3 local volatility",
+        "n": 12,
+        "systems": 4,
+        "exact": 12
+      },
+      {
+        "family": "G1.4 venue chain",
+        "n": 12,
+        "systems": 4,
+        "exact": 3
+      },
+      {
+        "family": "transport form (control)",
+        "n": 12,
+        "systems": 4,
+        "exact": 10
+      }
+    ],
+    "f4_class": [
+      {
+        "seed": 0,
+        "grid_2e5": 1,
+        "grid_1e3": 128,
+        "steps_2e5": 0,
+        "rell1_2e5": 0.0,
+        "members_2e5": 42
+      },
+      {
+        "seed": 1,
+        "grid_2e5": 28,
+        "grid_1e3": 128,
+        "steps_2e5": 32,
+        "rell1_2e5": 0.00011660542483473481,
+        "members_2e5": 151
+      },
+      {
+        "seed": 2,
+        "grid_2e5": 1,
+        "grid_1e3": 128,
+        "steps_2e5": 0,
+        "rell1_2e5": 0.0,
+        "members_2e5": 112
+      },
+      {
+        "seed": 3,
+        "grid_2e5": 1,
+        "grid_1e3": 96,
+        "steps_2e5": 13,
+        "rell1_2e5": 2.2672737387080757e-05,
+        "members_2e5": 78
+      },
+      {
+        "seed": 4,
+        "grid_2e5": 3,
+        "grid_1e3": 128,
+        "steps_2e5": 3,
+        "rell1_2e5": 0.00013407074563723058,
+        "members_2e5": 60
+      },
+      {
+        "seed": 5,
+        "grid_2e5": 2,
+        "grid_1e3": 32,
+        "steps_2e5": 42,
+        "rell1_2e5": 6.637360939703869e-05,
+        "members_2e5": 41
+      },
+      {
+        "seed": 6,
+        "grid_2e5": 3,
+        "grid_1e3": 128,
+        "steps_2e5": 122,
+        "rell1_2e5": 0.000374834383616977,
+        "members_2e5": 52
+      },
+      {
+        "seed": 7,
+        "grid_2e5": 9,
+        "grid_1e3": 128,
+        "steps_2e5": 13,
+        "rell1_2e5": 7.925728326543425e-05,
+        "members_2e5": 115
+      },
+      {
+        "seed": 8,
+        "grid_2e5": 7,
+        "grid_1e3": 128,
+        "steps_2e5": 4,
+        "rell1_2e5": 5.110848454526746e-05,
+        "members_2e5": 94
+      },
+      {
+        "seed": 9,
+        "grid_2e5": 3,
+        "grid_1e3": 128,
+        "steps_2e5": 294,
+        "rell1_2e5": 0.0017280053290878647,
+        "members_2e5": 99
+      },
+      {
+        "seed": 10,
+        "grid_2e5": 1,
+        "grid_1e3": 128,
+        "steps_2e5": 1,
+        "rell1_2e5": 4.2995202834114455e-06,
+        "members_2e5": 29
+      },
+      {
+        "seed": 11,
+        "grid_2e5": 5,
+        "grid_1e3": 128,
+        "steps_2e5": 0,
+        "rell1_2e5": 0.0,
+        "members_2e5": 101
+      }
+    ],
+    "a_enumeration": [
+      {
+        "space": "parity n=64 (measured run)",
+        "candidates": 27540584512,
+        "seconds": 18.91,
+        "measured": true
+      },
+      {
+        "space": "parity n=96",
+        "candidates": 1296543270880,
+        "seconds": 890.2,
+        "measured": false
+      },
+      {
+        "space": "parity n=128",
+        "candidates": 19062702032000,
+        "seconds": 13090.0,
+        "measured": false
+      },
+      {
+        "space": "parity n=64, k=11",
+        "candidates": 743595781824,
+        "seconds": 510.6,
+        "measured": false
+      },
+      {
+        "space": "determinant sign functions",
+        "candidates": 16905234931200,
+        "seconds": 9223000.0,
+        "measured": false
+      }
+    ],
+    "b_excess": [
+      {
+        "seed": 0,
+        "best_correct": 3.1376045810214084,
+        "twap": 5.866211125447559,
+        "vwap": 22.23123133204121,
+        "ac": 46.13868127161694,
+        "ow_linear": 4.5488632712018875,
+        "selfmint": 2.200382498589846
+      },
+      {
+        "seed": 1,
+        "best_correct": 11.13562120507117,
+        "twap": 11.153503526856172,
+        "vwap": 35.201203000740776,
+        "ac": 39.14175796235989,
+        "ow_linear": 73.8865331183796,
+        "selfmint": 7.506886698696647
+      },
+      {
+        "seed": 2,
+        "best_correct": 5.063200444657114,
+        "twap": 13.498825857779465,
+        "vwap": 21.651349702682154,
+        "ac": 29.7446599383858,
+        "ow_linear": 14.462692243510945,
+        "selfmint": 12.374972180481874
+      },
+      {
+        "seed": 3,
+        "best_correct": 4.557493895597647,
+        "twap": 4.755208407229597,
+        "vwap": 9.779786269471273,
+        "ac": 20.23833138951523,
+        "ow_linear": 9.8719091146126,
+        "selfmint": 4.0722271872330635
+      },
+      {
+        "seed": 4,
+        "best_correct": 16.06880074306172,
+        "twap": 108.3637334167964,
+        "vwap": 142.3815656588734,
+        "ac": 158.58534312226692,
+        "ow_linear": 39.93318955077579,
+        "selfmint": 110.97857012246152
+      },
+      {
+        "seed": 5,
+        "best_correct": 7.233055662141393,
+        "twap": 19.35202029531575,
+        "vwap": 23.323847675351896,
+        "ac": 38.36868337007854,
+        "ow_linear": 21.168605700752945,
+        "selfmint": 17.27845070810875
+      },
+      {
+        "seed": 6,
+        "best_correct": 1.264320360351919,
+        "twap": 12.296861655930364,
+        "vwap": 2.765308568864812,
+        "ac": 20.80893183780375,
+        "ow_linear": 4.4132285814618655,
+        "selfmint": 1.7937658362890416
+      },
+      {
+        "seed": 7,
+        "best_correct": 22.57099592175892,
+        "twap": 66.53397346293545,
+        "vwap": 109.2565015354181,
+        "ac": 135.70586537318135,
+        "ow_linear": 97.89370275559203,
+        "selfmint": 69.42516131722226
+      },
+      {
+        "seed": 8,
+        "best_correct": 6.477129177744745,
+        "twap": 6.729974981522229,
+        "vwap": 24.535527490200696,
+        "ac": 45.303642080492736,
+        "ow_linear": 65.234430987606,
+        "selfmint": 5.084551196976705
+      },
+      {
+        "seed": 9,
+        "best_correct": 3.0736415372311074,
+        "twap": 3.25187892424927,
+        "vwap": 8.254002005173795,
+        "ac": 16.10342777645166,
+        "ow_linear": 13.36057465314699,
+        "selfmint": 2.4880494999160883
+      },
+      {
+        "seed": 10,
+        "best_correct": 8.43764170665229,
+        "twap": 33.66070946290577,
+        "vwap": 40.30052579743351,
+        "ac": 54.19577160019157,
+        "ow_linear": 28.52891756731685,
+        "selfmint": 29.55115057353438
+      },
+      {
+        "seed": 11,
+        "best_correct": 12.527088363117686,
+        "twap": 50.654223913182754,
+        "vwap": 77.3762060434787,
+        "ac": 94.29481551420562,
+        "ow_linear": 48.819133020226616,
+        "selfmint": 55.2734150923554
+      }
+    ],
+    "c_errors": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "svi": [
+        45.86292633431944,
+        90.22960161744076,
+        95.88489148798794,
+        73.03482737891552,
+        122.79181185131169,
+        62.02217399415768,
+        32.95147265910342,
+        51.5259210953708,
+        97.08342679182738,
+        7.001774480455266,
+        34.191826365082065,
+        24.96710802015802
+      ],
+      "spline": [
+        208.981976681831,
+        220.9930275769147,
+        273.5161428175285,
+        243.7650827692722,
+        157.0535686489774,
+        229.95623737367566,
+        152.9788032121733,
+        226.2159743686156,
+        249.9423759819408,
+        238.46190669458298,
+        234.1218078544544,
+        230.89584281152136
+      ],
+      "nonparam": [
+        104.78648712379615,
+        195.81777273840217,
+        107.46729540210957,
+        163.3274720925503,
+        120.85731175765622,
+        168.73387310860326,
+        123.39161590245124,
+        191.3432097643636,
+        98.22782206441508,
+        134.8464350970207,
+        126.57995626617412,
+        186.24553056020653
+      ],
+      "class_fit": [
+        1.0079473373625541e-10,
+        5.680096170176128e-10,
+        3.0445354924941183e-10,
+        6.977439849368933e-11,
+        9.748818481569471e-11,
+        1.6863223146635256e-10,
+        2.0734974286875676e-11,
+        1.0450005546119066e-10,
+        1.7046685106882805e-10,
+        6.8241080233928515e-09,
+        1.3756550439623085e-09,
+        2.2096069644162187e-10
+      ],
+      "ssvi": [
+        186.75823475436948,
+        311.16351406832854,
+        141.41782399053395,
+        124.81643762382217,
+        198.07917008017722,
+        182.87498292668965,
+        103.01199284662634,
+        85.79195275811396,
+        205.40396146554636,
+        37.19794514706417,
+        61.16037043992446,
+        85.56551103360805
+      ],
+      "collapse": [
+        6.662059923948982e-11,
+        18.86503293394177,
+        4.092930432495723,
+        6.070329734332805,
+        2.236375985679404,
+        5.019063551376053e-10,
+        15.110791134185165,
+        3.693559127974167e-11,
+        1.4405582320198333e-10,
+        11.663565528855646,
+        11.744717795219252,
+        4.5266148491943133e-10
+      ]
+    },
+    "c_lp": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "visible_T": [
+        569.8452641474086,
+        634.9017371597477,
+        1020.9676621570949,
+        355.97604307986865,
+        380.533761427646,
+        632.7394801548443,
+        370.5695083341606,
+        441.02705317629,
+        578.8168752283437,
+        756.3038632782007,
+        521.2593387632758,
+        496.8630052088641
+      ],
+      "missing_T": [
+        917.3049687779769,
+        1261.0746549147939,
+        841.242788518234,
+        877.1720028143495,
+        900.6962566951782,
+        769.9756990441043,
+        1049.1270289355184,
+        1348.461899171628,
+        1184.5172107279666,
+        863.1129123442996,
+        891.5302454225429,
+        1410.6352830672533
+      ]
+    },
+    "d_gate0_verdicts": [
+      "fail",
+      "fail",
+      "pass",
+      "fail",
+      "pass",
+      "fail",
+      "fail"
+    ],
+    "probe_timeline": [
+      {
+        "trial": "2qr2E83",
+        "outcome": "reward 1.0",
+        "form_min": 1.73,
+        "meter_min": 2.13,
+        "timeline_min": 2.85,
+        "first_exact_fit_min": 28.0,
+        "wall_min": 162.0
+      },
+      {
+        "trial": "2GTafRv",
+        "outcome": "reward 0.0",
+        "form_min": 3.93,
+        "meter_min": 3.93,
+        "timeline_min": 6.47,
+        "first_exact_fit_min": 6.47,
+        "wall_min": 187.0
+      }
+    ]
+  }
+}

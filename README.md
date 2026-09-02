@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <img alt="bundles" src="https://img.shields.io/badge/bundles-3-9184CF"> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-760-B3A8E6">
+  <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <img alt="bundles" src="https://img.shields.io/badge/bundles-4-9184CF"> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-762-B3A8E6">
 </p>
 
 ---
@@ -26,6 +26,7 @@ withheld under contamination control (each bundle's `WITHHELD.md`).
 | [`MRF-2026-01-acceptance-gauntlet`](experiments/MRF-2026-01-acceptance-gauntlet/) | task acceptance and seed calibration | 120 |
 | [`MRF-2026-02-held-out-confidence`](experiments/MRF-2026-02-held-out-confidence/) | agent self-knowledge under a held-out criterion | 240 |
 | [`MRF-2026-03-track-label`](experiments/MRF-2026-03-track-label/) | an ability label raises the effort of an agent | 400 |
+| [`MRF-2026-04-task-design-collapse`](experiments/MRF-2026-04-task-design-collapse/) | eight quantitative-finance task designs, screened and retired | 2 |
 
 ## What each bundle contains
 

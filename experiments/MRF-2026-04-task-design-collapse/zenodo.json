@@ -1,0 +1,42 @@
+{
+  "upload_type": "dataset",
+  "title": "Fair and cheap: eight task designs for frontier evaluation in quantitative finance (MRF-2026-04 reproducibility data)",
+  "version": "1.0.0",
+  "publication_date": "2026-09-01",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Arcifa, Ricardo",
+      "affiliation": "Montana Research Foundation"
+    },
+    {
+      "name": "Carra, Francieli",
+      "affiliation": "Montana Research Foundation"
+    }
+  ],
+  "description": "Reproducibility data for Montana Research Foundation preprint MRF-2026-04, \"Fair and cheap: eight task designs for frontier evaluation in quantitative finance\": per-rollout aggregate records for the one probed cell, the consolidated gate-0 dataset every value in the manuscript is drawn from, each carrying its source and the method that produced it, and a self-contained verify.py that recounts the designs and recomputes the probe from this bundle alone. Task families, screening spike code, raw agent transcripts, and held-out grading data are withheld under contamination control.",
+  "keywords": [
+    "reproducibility",
+    "language-model evaluation",
+    "agent benchmarks",
+    "held-out criterion"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-04-task-design-collapse",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/Montana-Research-Foundation/open-data",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://montanaresearch.org",
+      "relation": "isPartOf",
+      "scheme": "url"
+    }
+  ]
+}
