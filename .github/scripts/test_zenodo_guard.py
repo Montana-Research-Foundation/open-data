@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prove the Zenodo deposit guard on the real experiments/ tree.
+"""Prove the Zenodo deposit guard.
 
     python .github/scripts/test_zenodo_guard.py
 
@@ -7,17 +7,29 @@ A Zenodo deposit mints a new record rather than updating one, so depositing
 an experiment that already has a DOI duplicates it and orphans the DOI that
 is already cited. `zenodo_deposit.py` therefore skips any experiment whose
 CITATION.cff or zenodo.json records one. That skip is the thing standing
-between a mistaken dispatch and three orphaned records, so it is tested
-against the tree as it actually is rather than against a fixture.
+between a mistaken dispatch and a set of orphaned records, so it is tested
+two ways.
 
-Every check runs `--dry-run`, with ZENODO_TOKEN removed from the
+Against the real `experiments/` tree, every published experiment must be
+skipped, by `--all` and by name. That is the invariant that matters and it
+holds whatever state the tree is in.
+
+Against a fixture, one experiment with a DOI and one without, the selection
+half is proved: the guard must skip the first and select the second. The
+fixture exists because the real tree is fully published once a release
+round finishes, and a test that could only run before the last DOI was
+minted would stop testing anything the day it mattered most.
+
+Every check runs `--dry-run` with ZENODO_TOKEN removed from the
 environment, so this file cannot reach the network however it is invoked.
 The `datasets` check runs it on every pull request.
 """
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -36,11 +48,48 @@ def check(label, ok, detail=""):
         failures.append(label)
 
 
-def run(*args):
-    """The script in dry-run, with no token reachable."""
+def run(*args, root=None):
+    """The script in dry-run, with no token reachable.
+
+    `root` runs a copy of the script from another tree: it resolves
+    experiments/ from its own location, so the fixture needs its own copy
+    rather than a changed working directory.
+    """
+    script = Path(root) / ".github/scripts/zenodo_deposit.py" if root else SCRIPT
     env = {k: v for k, v in os.environ.items() if k != "ZENODO_TOKEN"}
-    return subprocess.run([sys.executable, str(SCRIPT), *args, "--dry-run"],
-                          capture_output=True, text=True, env=env, cwd=ROOT)
+    return subprocess.run([sys.executable, str(script), *args, "--dry-run"],
+                          capture_output=True, text=True, env=env,
+                          cwd=root or ROOT)
+
+
+CFF = """cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "{title}"
+type: dataset
+authors:
+  - given-names: Test
+    family-names: Author
+version: "1.0.0"
+license: CC-BY-4.0
+{doi}"""
+
+
+def make_fixture(tmp):
+    """Two experiments: one already published, one not."""
+    exp = Path(tmp) / "experiments"
+    published = exp / "MRF-0000-01-published"
+    unpublished = exp / "MRF-0000-02-unpublished"
+    for d, doi in ((published, "10.5281/zenodo.9999999"), (unpublished, None)):
+        d.mkdir(parents=True)
+        (d / "CITATION.cff").write_text(CFF.format(
+            title=d.name,
+            doi=f"doi: {doi}\n" if doi else "# doi: 10.5281/zenodo.XXXXXXX\n"))
+        meta = {"upload_type": "dataset", "title": d.name,
+                "license": "cc-by-4.0", "creators": [{"name": "Author, Test"}]}
+        if doi:
+            meta["doi"] = doi
+        (d / "zenodo.json").write_text(json.dumps(meta, indent=2) + "\n")
+    return published, unpublished
 
 
 def main():
@@ -53,49 +102,58 @@ def main():
     for p in experiments:
         print(f"  {p.name:<38s} {zd.recorded_doi(p) or '(no DOI yet)'}")
 
-    print("\nthe tree is in the state this guard exists for")
-    check("at least one experiment already has a DOI", bool(published))
-    check("at least one experiment has none", bool(unpublished))
-
-    print("\nrecorded_doi reads both files")
-    for p in published:
-        cff = "doi:" in "\n".join(
-            l for l in (p / "CITATION.cff").read_text().splitlines()
-            if not l.strip().startswith("#"))
-        zj = bool((json.loads((p / "zenodo.json").read_text()).get("doi") or ""))
-        check(f"{p.name} carries a DOI in CITATION.cff and zenodo.json",
-              cff and zj)
-    for p in unpublished:
-        text = (p / "CITATION.cff").read_text()
-        check(f"{p.name} has only the commented placeholder",
-              "# doi:" in text and not any(
-                  l.strip().startswith("doi:") for l in text.splitlines()))
-
-    print("\n--all deposits only what has no DOI")
+    print("\nevery published experiment is skipped, whatever the tree holds")
     r = run("--all")
     check("--all exits 0", r.returncode == 0, r.stderr.strip()[-120:])
     for p in published:
-        check(f"--all skips {p.name}", f"{p.name}: skip, already published" in r.stdout)
+        check(f"--all skips {p.name}",
+              f"{p.name}: skip, already published" in r.stdout)
+        rp = run("--experiment", p.name)
+        check(f"--experiment {p.name} is skipped",
+              rp.returncode == 0 and "skip, already published" in rp.stdout
+              and "would deposit" not in rp.stdout)
     for p in unpublished:
         check(f"--all selects {p.name}", f"{p.name}: would deposit" in r.stdout)
     check("--all reports the right split",
-          f"plan: {len(unpublished)} to deposit, {len(published)} skipped" in r.stdout)
+          f"plan: {len(unpublished)} to deposit, {len(published)} skipped"
+          in r.stdout)
+    check("no published experiment is ever selected",
+          all(f"{p.name}: would deposit" not in r.stdout for p in published))
 
-    print("\n--experiment selects one, and the guard still applies")
-    for p in unpublished:
-        r = run("--experiment", p.name)
-        check(f"--experiment {p.name} is selected",
-              r.returncode == 0 and f"{p.name}: would deposit" in r.stdout)
+    print("\nboth files are read for a recorded DOI")
     for p in published:
-        r = run("--experiment", p.name)
-        check(f"--experiment {p.name} is skipped",
-              r.returncode == 0 and "skip, already published" in r.stdout
-              and "would deposit" not in r.stdout)
-    if unpublished:
-        p = unpublished[0]
-        r = run("--experiment", f"experiments/{p.name}")
+        cff_lines = [l for l in (p / "CITATION.cff").read_text().splitlines()
+                     if not l.strip().startswith("#")]
+        by_cff = any(l.strip().startswith("doi:") for l in cff_lines)
+        by_zen = bool((json.loads((p / "zenodo.json").read_text()).get("doi")
+                       or "").strip())
+        check(f"{p.name} records its DOI in CITATION.cff and zenodo.json",
+              by_cff and by_zen)
+
+    print("\nfixture: one published, one not")
+    with tempfile.TemporaryDirectory() as tmp:
+        shutil.copytree(ROOT / ".github", Path(tmp) / ".github")
+        pub, unpub = make_fixture(tmp)
+        r = run("--all", root=tmp)
+        check("fixture --all exits 0", r.returncode == 0,
+              r.stderr.strip()[-120:])
+        check("fixture skips the published one",
+              f"{pub.name}: skip, already published as 10.5281/zenodo.9999999"
+              in r.stdout)
+        check("fixture selects the unpublished one",
+              f"{unpub.name}: would deposit" in r.stdout)
+        check("fixture split is 1 and 1",
+              "plan: 1 to deposit, 1 skipped" in r.stdout)
+        rp = run("--experiment", pub.name, root=tmp)
+        check("fixture skips the published one by name",
+              "skip, already published" in rp.stdout
+              and "would deposit" not in rp.stdout)
+        rp = run("--experiment", unpub.name, root=tmp)
+        check("fixture selects the unpublished one by name",
+              f"{unpub.name}: would deposit" in rp.stdout)
+        rp = run("--experiment", f"experiments/{unpub.name}", root=tmp)
         check("a path works as well as a bare name",
-              r.returncode == 0 and f"{p.name}: would deposit" in r.stdout)
+              f"{unpub.name}: would deposit" in rp.stdout)
 
     print("\nselecting nothing is an error, never a fallback to everything")
     r = run()
@@ -114,8 +172,8 @@ def main():
     if failures:
         print(f"FAIL: {len(failures)} check(s): {', '.join(failures)}")
         return 1
-    print("OK: the guard skips every published experiment and selects only "
-          "the unpublished one.")
+    print(f"OK: {len(published)} published experiment(s) skipped, and the "
+          f"fixture proves an unpublished one is still selected.")
     return 0
 
 
