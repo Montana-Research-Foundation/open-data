@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "Fair and cheap: eight task designs for frontier evaluation in quantitative finance (MRF-2026-04 reproducibility data)"
+abstract: >-
+  Aggregate records for the one probed cell, the consolidated
+  gate-0 dataset every value in the manuscript is drawn from with
+  its source and method, and a self-contained script that
+  recomputes both,
+  behind Montana Research Foundation preprint MRF-2026-04. Task families, screening
+  spike code, raw agent transcripts, and held-out grading data
+  are withheld under
+  contamination control (WITHHELD.md).
+type: dataset
+authors:
+  - given-names: Ricardo
+    family-names: Arcifa
+    affiliation: Montana Research Foundation
+  - given-names: Francieli
+    family-names: Carra
+    affiliation: Montana Research Foundation
+version: "1.0.0"
+date-released: "2026-09-01"
+license: CC-BY-4.0
+url: "https://montanaresearch.org"
+repository-code: "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-04-task-design-collapse"
+keywords:
+  - reproducibility
+  - language-model evaluation
+# This experiment has its own Zenodo deposit and DOI, minted on release.
+# Add the DOI here and in the preprint front matter (MRF-2026-04 make_mrf.py, \mrfdoi):
+# doi: 10.5281/zenodo.XXXXXXX
