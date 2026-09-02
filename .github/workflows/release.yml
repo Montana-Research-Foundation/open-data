@@ -2,6 +2,10 @@ name: release
 on:
   workflow_dispatch:
     inputs:
+      experiment:
+        description: "Experiment directory name, e.g. MRF-2026-04-task-design-collapse (required)"
+        type: string
+        required: true
       environment:
         description: "Zenodo target"
         type: choice
@@ -32,17 +36,32 @@ jobs:
             echo "::error::ZENODO_TOKEN secret is not set. Add it in Settings -> Secrets and variables -> Actions."
             exit 1
           fi
-      - name: Deposit each experiment
+      - name: Check an experiment was named
+        env:
+          EXPERIMENT: ${{ inputs.experiment }}
+        run: |
+          if [ -z "$EXPERIMENT" ]; then
+            echo "::error::Name the experiment to deposit. This workflow never falls back to depositing all of them: a Zenodo deposit mints a new record, so a bare run would duplicate every published experiment and orphan its DOI."
+            exit 1
+          fi
+      - name: Show the plan (no token, no network)
+        env:
+          EXPERIMENT: ${{ inputs.experiment }}
+        run: |
+          python .github/scripts/zenodo_deposit.py --experiment "$EXPERIMENT" \
+            --dry-run --summary "$GITHUB_STEP_SUMMARY"
+      - name: Deposit the named experiment
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          EXPERIMENT: ${{ inputs.experiment }}
         run: |
           BASE=https://sandbox.zenodo.org
           [ "${{ inputs.environment }}" = "production" ] && BASE=https://zenodo.org
           PUB=""
           [ "${{ inputs.publish }}" = "true" ] && PUB="--publish"
           echo "target: $BASE  publish: ${{ inputs.publish }}" >> "$GITHUB_STEP_SUMMARY"
-          python .github/scripts/zenodo_deposit.py --all --base-url "$BASE" $PUB \
-            --summary "$GITHUB_STEP_SUMMARY" --out dois.json
+          python .github/scripts/zenodo_deposit.py --experiment "$EXPERIMENT" \
+            --base-url "$BASE" $PUB --summary "$GITHUB_STEP_SUMMARY" --out dois.json
       - name: Upload DOIs
         uses: actions/upload-artifact@v4
         with:

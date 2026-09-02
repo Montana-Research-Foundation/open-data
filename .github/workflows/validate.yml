@@ -17,6 +17,8 @@ jobs:
       - run: pip install pyyaml
       - name: Validate release (integrity, verify.py, citations, no leaks)
         run: python .github/scripts/validate_release.py
+      - name: Zenodo deposit guard (published experiments are never re-deposited)
+        run: python .github/scripts/test_zenodo_guard.py
   pr-policy:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
