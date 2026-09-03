@@ -4,9 +4,13 @@
 
 Two things are checked, and both read only files in this directory.
 
-1. `records/` — the one probed cell. The pass rate, its Wilson 95%
-   interval, the metered cost, and the terminating exception of the
-   errored trial are recomputed from the per-trial records.
+1. `records/` — the one probed cell. The pass count, the metered cost,
+   and the terminating exception of the errored trial are recounted from
+   the per-trial records, and every `passed` flag is re-derived from
+   `score` (the pass rule is: `passed` iff `score` >= 0.5). No pass rate
+   or interval is printed: two rollouts are below the paper's standard
+   sample size, and the paper quotes a rate with an interval only when a
+   cell reaches that size.
 
 2. `dataset.json` — the consolidated gate-0 dataset the paper is written
    from. Every value in it carries a `source` and a `method`
@@ -21,21 +25,10 @@ The seven designs that never ran against a model have no rollouts by
 construction; that is the paper's result, not a gap in this bundle.
 """
 import json
-import math
 import pathlib
 from collections import Counter
 
 HERE = pathlib.Path(__file__).resolve().parent
-
-
-def wilson(k, n, z=1.959963984540054):
-    if n == 0:
-        return (float("nan"), float("nan"))
-    p = k / n
-    d = 1 + z * z / n
-    c = p + z * z / (2 * n)
-    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return ((c - h) / d, (c + h) / d)
 
 
 def main():
@@ -50,11 +43,13 @@ def main():
     passes = sum(1 for r in rows if r.get("passed"))
     errs = [r for r in rows if r.get("errored")]
     cost = sum(r.get("cli_cost_usd") or 0.0 for r in rows)
-    lo, hi = wilson(passes, n)
+    for r in rows:
+        if bool(r.get("passed")) != ((r.get("score") or 0) >= 0.5):
+            fails.append(f"pass rule ({r.get('trial')})")
     print(f"  trials                {n}")
-    print(f"  passes                {passes}")
-    print(f"  pass rate             {passes / n:.3f}  "
-          f"Wilson 95% [{lo:.3f}, {hi:.3f}]")
+    print(f"  passes                {passes}  (pass rule: score >= 0.5,")
+    print( "                        re-derived per trial; no rate or interval")
+    print( "                        is quoted at this sample size)")
     print(f"  errored trials        {len(errs)}"
           + (f"  ({errs[0].get('exception')})" if errs else ""))
     print(f"  metered cost (USD)    {cost:.2f}")

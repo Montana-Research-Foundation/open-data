@@ -25,9 +25,12 @@ three things.
    designs remain candidates for a later redesign, and releasing the
    spikes would leak them. Every number the paper takes from a spike is
    in `dataset.json` with the file it came from and the method that
-   produced it, so a reader can see what was measured, where, and how,
-   without the instrument itself.
+   produced it, so the record of what was measured, where, and how is
+   preserved with each number, without the instrument itself. The named
+   files live in the internal research repository the paper was written
+   in and are not public; the bundle's README records the commit of that
+   repository the references were verified against.
 
-Everything needed to recompute the paper's statistics from the released
-aggregates is present. What is absent cannot reconstruct a family, a
-transcript, or a candidate design.
+The recounts `verify.py` performs run from the released aggregates
+alone. What is absent cannot reconstruct a family, a transcript, or a
+candidate design.

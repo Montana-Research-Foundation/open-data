@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img alt="preprint" src="https://img.shields.io/badge/preprint-MRF--2026--04-9184CF"> <img alt="version" src="https://img.shields.io/badge/version-v1-5A5A66"> <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <a href="https://doi.org/10.5281/zenodo.22250740"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22250740-9184CF"></a> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-2-B3A8E6">
+  <img alt="preprint" src="https://img.shields.io/badge/preprint-MRF--2026--04-9184CF"> <img alt="version" src="https://img.shields.io/badge/version-1.0.1-5A5A66"> <img alt="license" src="https://img.shields.io/badge/license-CC%20BY%204.0-5A5A66"> <a href="https://doi.org/10.5281/zenodo.22250739"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22250739-9184CF"></a> <img alt="rollouts" src="https://img.shields.io/badge/rollouts-2-B3A8E6">
 </p>
 
 ---
@@ -39,18 +39,29 @@ preprint, not here.
   `source` and a `method`: `parsed` from a committed file, `derived` from
   one by a stated rule, `transcribed` from a numbered line of a committed
   report, or `maintained` in the census. This is the file the manuscript's
-  macros, tables, and figures are generated from.
-- `verify.py` — recomputes the probe's pass rate and Wilson interval from
-  `records/`, recounts the designs by disposition and by what retired
-  them, checks those recounts against the scalars the manuscript quotes,
-  and reports the provenance mix. It reads only this directory.
+  macros, tables, and figures are generated from. The `source` values
+  locate each value's origin in the internal research repository the
+  paper was written in; that repository is not public, and nothing in
+  this bundle depends on resolving them (see the notes below).
+- `verify.py` — recounts the probe's outcomes (passes, the errored trial,
+  the metered cost) from `records/`, recounts the designs by disposition
+  and by what retired them, checks those recounts against the scalars the
+  manuscript quotes, and reports the provenance mix. It reads only this
+  directory. No pass rate or interval is quoted for the probe: two
+  rollouts are below the paper's standard sample size, and the paper
+  quotes a rate with an interval only at that size.
 - `WITHHELD.md`, `LICENSE` (CC BY 4.0), `MANIFEST.sha256`.
 
 ## Verify
 
     python3 verify.py
 
-Every recount printed matches the paper.
+Every dataset recount printed matches the scalar the manuscript quotes,
+and the probe recounts match `records/`.
+
+## Notes on the records
+
+- `source` values in `dataset.json`, including the `file:line` references, locate each value's origin in the internal research repository the paper was written in. That repository is not public; the references were verified against its commit `8fcab1b4399041fe589582598ca3b5d3d9ee37b5`, and nothing in this bundle depends on resolving them.
 
 ## Why there is one cell and not a grid
 
@@ -64,5 +75,6 @@ from this bundle, and `verify.py` recounts those dispositions from
 
 ## Citation
 
-Cite the preprint MRF-2026-04 and this data bundle by its DOI (minted on
-release; see the preprint's front matter).
+Cite the preprint MRF-2026-04 and this data bundle by the DOI in
+`CITATION.cff` (the concept DOI, which resolves to the latest deposited
+version of this bundle).

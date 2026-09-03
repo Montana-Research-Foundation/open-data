@@ -1,8 +1,8 @@
 {
   "upload_type": "dataset",
   "title": "An Ability Label Raises the Effort of an Agent (MRF-2026-03 reproducibility data)",
-  "version": "1.0.0",
-  "publication_date": "2026-08-20",
+  "version": "1.0.1",
+  "publication_date": "2026-09-03",
   "access_right": "open",
   "license": "cc-by-4.0",
   "creators": [
@@ -24,7 +24,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-03-track-label",
+      "identifier": "https://github.com/Montana-Research-Foundation/open-data/tree/MRF-2026-03-v1.0.1/experiments/MRF-2026-03-track-label",
       "relation": "isIdenticalTo",
       "scheme": "url"
     },
@@ -38,6 +38,5 @@
       "relation": "isPartOf",
       "scheme": "url"
     }
-  ],
-  "doi": "10.5281/zenodo.22126533"
+  ]
 }

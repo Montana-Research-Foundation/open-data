@@ -16,8 +16,9 @@
 # Reproducibility data
 
 One directory per preprint, under `experiments/`. Each is the data behind
-its paper: the aggregate outcome of every rollout, and a
-self-contained `verify.py` that recomputes the headline from it. The task
+its paper: the aggregate outcome of every rollout in the reported
+panel, and a self-contained `verify.py` that recomputes the headline
+statistics from it. The task
 families, the raw agent transcripts, and the held-out grading data are
 withheld under contamination control (each bundle's `WITHHELD.md`).
 
@@ -31,15 +32,17 @@ withheld under contamination control (each bundle's `WITHHELD.md`).
 ## What each bundle contains
 
 - `records/` — one `.jsonl` per experimental cell, one line per rollout,
-  aggregate fields only (seed, arm, configuration, score, pass, token
-  counts, turns). No transcript, task text, induced rule, or canary.
+  aggregate fields only; each bundle's `README.md` lists the exact
+  fields its records carry. No transcript, task text, induced rule, or
+  canary.
 - `dataset.json` — the computed aggregate the paper reports (where the
   paper has one).
-- `verify.py` — recomputes the per-cell pass rates and intervals from
-  `records/` alone, with no task content.
-- `CITATION.cff` — the experiment's citation, carrying its own DOI once
-  minted.
-- `zenodo.json` — Zenodo deposition metadata for minting that DOI.
+- `verify.py` — recomputes that bundle's per-cell statistics from
+  `records/` alone, with no task content, and re-derives every `passed`
+  flag from `score` (pass rule: `score` >= 0.5).
+- `CITATION.cff` — the experiment's citation, carrying its concept DOI
+  (which resolves to the latest deposited version).
+- `zenodo.json` — Zenodo deposition metadata for that experiment.
 - `README.md`, `WITHHELD.md`, `LICENSE` (CC BY 4.0), `MANIFEST.sha256`.
 
 The paper's LaTeX source and its figure and table scripts live with the
@@ -54,7 +57,9 @@ The printed rates and intervals match the paper.
 ## Release
 
 Each experiment is deposited to Zenodo as its own record, so it carries
-its own DOI. On release, the DOI is written into that experiment's
-`CITATION.cff` and into the matching preprint's front matter
-(`\mrfdoi`). Cite each experiment from its own `CITATION.cff`; there is
-no repository-level DOI.
+its own DOI. The `CITATION.cff` carries the experiment's concept DOI,
+which resolves to the latest deposited version; each deposited version
+additionally receives its own version DOI from Zenodo. A release of a
+bundle version is tagged `<experiment>-v<version>` on the merge commit,
+and the deposit's `isIdenticalTo` names that tag. Cite each experiment
+from its own `CITATION.cff`; there is no repository-level DOI.

@@ -1,7 +1,7 @@
 # What is withheld, and why
 
-This bundle releases the aggregate results and the analysis and figure
-code, and withholds two things:
+This bundle releases the aggregate per-rollout results and a
+self-contained verification script, and withholds two things:
 
 1. **The task families** (the generators, the labeled example data, the
    held-out grading data). The families are a measurement instrument for
@@ -17,6 +17,8 @@ code, and withholds two things:
    whether it passed, and its token counts — is released in `records/`;
    the transcript that produced it is not.
 
-Everything needed to recompute the paper's statistics from the aggregate
-per-rollout outcomes is present. What is absent cannot reconstruct the
-family or the transcript.
+The per-cell statistics named in this bundle's README recompute from the
+aggregate per-rollout outcomes alone; statistics the paper computes from
+the transcripts or the held-out data do not, and the README's notes say
+which is which where the distinction matters. What is absent cannot
+reconstruct the family or the transcript.
