@@ -15,6 +15,10 @@ on:
         description: "Publish the deposit (mints the real DOI; irreversible on production)"
         type: boolean
         default: false
+      new_version:
+        description: "Deposit a new version of the named, already published experiment (requires its concept DOI in CITATION.cff)"
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -48,8 +52,10 @@ jobs:
         env:
           EXPERIMENT: ${{ inputs.experiment }}
         run: |
+          NV=""
+          [ "${{ inputs.new_version }}" = "true" ] && NV="--new-version"
           python .github/scripts/zenodo_deposit.py --experiment "$EXPERIMENT" \
-            --dry-run --summary "$GITHUB_STEP_SUMMARY"
+            $NV --dry-run --summary "$GITHUB_STEP_SUMMARY"
       - name: Deposit the named experiment
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
@@ -59,9 +65,11 @@ jobs:
           [ "${{ inputs.environment }}" = "production" ] && BASE=https://zenodo.org
           PUB=""
           [ "${{ inputs.publish }}" = "true" ] && PUB="--publish"
-          echo "target: $BASE  publish: ${{ inputs.publish }}" >> "$GITHUB_STEP_SUMMARY"
+          NV=""
+          [ "${{ inputs.new_version }}" = "true" ] && NV="--new-version"
+          echo "target: $BASE  publish: ${{ inputs.publish }}  new_version: ${{ inputs.new_version }}" >> "$GITHUB_STEP_SUMMARY"
           python .github/scripts/zenodo_deposit.py --experiment "$EXPERIMENT" \
-            --base-url "$BASE" $PUB --summary "$GITHUB_STEP_SUMMARY" --out dois.json
+            $NV --base-url "$BASE" $PUB --summary "$GITHUB_STEP_SUMMARY" --out dois.json
       - name: Upload DOIs
         uses: actions/upload-artifact@v4
         with:

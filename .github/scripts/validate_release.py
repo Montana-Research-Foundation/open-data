@@ -7,7 +7,10 @@ Checks, per experiment under experiments/:
   - verify.py runs to completion (returns 0);
   - CITATION.cff is valid and complete; zenodo.json is valid dataset metadata;
   - the README rollout count matches the actual record line count;
-  - no leak: absolute local paths, private key blocks, or a canary marker.
+  - no leak: absolute local paths or private key blocks. (The
+    contamination canary is deliberately NOT checked here: embedding its
+    marker in a public validator would itself publish the canary. The
+    canary scan runs in the private repository before a release.)
 
 Run in CI and locally:  python .github/scripts/validate_release.py
 Exits non-zero if anything fails, after printing every failure.
