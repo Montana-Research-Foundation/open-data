@@ -120,15 +120,29 @@ def main():
     check("no published experiment is ever selected",
           all(f"{p.name}: would deposit" not in r.stdout for p in published))
 
-    print("\nboth files are read for a recorded DOI")
+    print("\nthe recorded DOI lives in CITATION.cff (the concept DOI)")
     for p in published:
         cff_lines = [l for l in (p / "CITATION.cff").read_text().splitlines()
                      if not l.strip().startswith("#")]
         by_cff = any(l.strip().startswith("doi:") for l in cff_lines)
-        by_zen = bool((json.loads((p / "zenodo.json").read_text()).get("doi")
-                       or "").strip())
-        check(f"{p.name} records its DOI in CITATION.cff and zenodo.json",
-              by_cff and by_zen)
+        check(f"{p.name} records its DOI in CITATION.cff", by_cff)
+        # zenodo.json deliberately carries no doi key: each deposited
+        # version receives its own version DOI from Zenodo, and the
+        # concept DOI in CITATION.cff needs no write-back.
+        check(f"{p.name} zenodo.json carries no doi key",
+              "doi" not in json.loads((p / "zenodo.json").read_text()))
+
+    print("\n--new-version selects only an already published experiment")
+    for p in published[:1]:
+        r = run("--experiment", p.name, "--new-version")
+        check(f"--new-version selects {p.name}",
+              r.returncode == 0 and "would deposit a new version of"
+              in r.stdout and "skip, already published" not in r.stdout)
+    r = run("--all", "--new-version")
+    check("--new-version with --all exits non-zero", r.returncode != 0)
+    r = run("--new-version")
+    check("--new-version with no experiment exits non-zero",
+          r.returncode != 0)
 
     print("\nfixture: one published, one not")
     with tempfile.TemporaryDirectory() as tmp:
@@ -154,6 +168,14 @@ def main():
         rp = run("--experiment", f"experiments/{unpub.name}", root=tmp)
         check("a path works as well as a bare name",
               f"{unpub.name}: would deposit" in rp.stdout)
+        rp = run("--experiment", pub.name, "--new-version", root=tmp)
+        check("fixture --new-version selects the published one",
+              rp.returncode == 0
+              and "would deposit a new version of 10.5281/zenodo.9999999"
+              in rp.stdout)
+        rp = run("--experiment", unpub.name, "--new-version", root=tmp)
+        check("fixture --new-version refuses the unpublished one",
+              rp.returncode != 0 and "would deposit" not in rp.stdout)
 
     print("\nselecting nothing is an error, never a fallback to everything")
     r = run()

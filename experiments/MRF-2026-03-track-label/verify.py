@@ -3,10 +3,13 @@
     python3 verify.py
 
 Reads the aggregate per-rollout records and recomputes, per cell, the
-pass rate and its Wilson 95% interval; for the track-label bundle it also
-recomputes the confirmatory reasoning-token effect (paired d and the
-exact two-sided signed-rank p) from the matched seeds. No task content is
-needed; the withheld transcripts are not used. Values are printed for
+pass rate and its Wilson 95% interval;
+it also recomputes the confirmatory reasoning-token effect (paired d and
+the exact two-sided signed-rank p) from the matched seeds.
+The pass rule is: `passed` iff `score` >= 0.5. The script re-derives the
+flag from `score` on every record and stops on any disagreement with the
+stored value, so the rule is checked rather than trusted. No task content
+is needed; the withheld transcripts are not used. Values are printed for
 comparison against the paper.
 """
 import json
@@ -33,6 +36,31 @@ def wilson(k, n):
     c = p + Z * Z / (2 * n)
     h = Z * math.sqrt(p * (1 - p) / n + Z * Z / (4 * n * n))
     return (round((c - h) / d, 4), round((c + h) / d, 4))
+
+
+def rates():
+    print("== per-cell pass rate (Wilson 95%); pass rule: score >= 0.5 ==")
+    bad = []
+    for f in sorted(REC.glob("*.jsonl")):
+        rows = load(f.stem)
+        for r in rows:
+            if bool(r.get("passed")) != ((r.get("score") or 0) >= 0.5):
+                bad.append(f"{f.stem} seed {r.get('seed')}")
+        k = sum(1 for r in rows if r["passed"])
+        line = f"  {f.stem:52s} {k}/{len(rows)}  {wilson(k, len(rows))}"
+        dec = [(r["metrics"]["declared_confidence"], r["passed"])
+               for r in rows if isinstance(r.get("metrics"), dict)
+               and r["metrics"].get("declared_confidence") is not None]
+        if dec:
+            mc = sum(c for c, _ in dec) / len(dec)
+            pr = sum(1 for _, p in dec if p) / len(dec)
+            line += (f"\n    {'':50s} mean declared confidence "
+                     f"{mc:.4f} (n={len(dec)})  "
+                     f"gap {mc - pr:+.4f}")
+        print(line)
+    if bad:
+        raise SystemExit("FAIL: stored `passed` disagrees with the pass "
+                         "rule score >= 0.5 on: " + ", ".join(bad))
 
 
 def signed_rank_p(diffs):
@@ -72,14 +100,6 @@ def paired_d(diffs):
     return None if sd == 0 else round(m / sd, 4)
 
 
-def rates():
-    print("== per-cell pass rate (Wilson 95%) ==")
-    for f in sorted(REC.glob("*.jsonl")):
-        rows = load(f.stem)
-        k = sum(1 for r in rows if r["passed"])
-        print(f"  {f.stem:52s} {k}/{len(rows)}  {wilson(k, len(rows))}")
-
-
 def paired(cell_a, cell_b, key="thinking_tokens", label=""):
     a = {r["seed"]: r for r in load(cell_a)}
     b = {r["seed"]: r for r in load(cell_b)}
@@ -94,7 +114,7 @@ def paired(cell_a, cell_b, key="thinking_tokens", label=""):
 
 if __name__ == "__main__":
     rates()
-    # track-label confirmatory stage 5 (present only in that bundle)
+    # track-label confirmatory stage 5
     for cfg, drv in (("Opus 5", "cli"), ("GPT-5.6 Sol", "gpt")):
         a = f"protocol-induction-track5-remedial-individual-{drv}"
         b = f"protocol-induction-track5-standard-individual-{drv}"

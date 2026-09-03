@@ -16,16 +16,33 @@ Token from the ZENODO_TOKEN environment variable.
       --base-url https://zenodo.org --publish --write-doi
 
 An experiment whose CITATION.cff or zenodo.json already records a DOI is
-never deposited again. A Zenodo deposit mints a new record, so re-running
-over a published experiment does not update it, it duplicates it and
-orphans the DOI that is already cited. The skip is unconditional and has
-no override: releasing a new version of a published experiment is a
-deliberate change to this script, not a flag someone can reach for at
-2 a.m.
+never deposited as a NEW record. A plain deposit mints a new record, so
+re-running over a published experiment would not update it, it would
+duplicate it and orphan the DOI that is already cited. The plain-deposit
+skip is unconditional.
 
---write-doi patches each experiment's CITATION.cff and zenodo.json with the
-minted DOI. In CI the DOIs are written to --out and the step summary instead,
-and a maintainer applies them through the normal issue -> branch -> PR flow.
+Releasing a revision of a published experiment is the separate,
+deliberate `--new-version` path:
+
+  python .github/scripts/zenodo_deposit.py --experiment <name> \
+      --new-version --base-url https://zenodo.org --publish
+
+It requires the experiment to record a DOI (the concept DOI, which
+resolves to the latest version), creates a new version of that record
+through the Zenodo versioning API, replaces its files with the current
+bundle zip, and updates the metadata from zenodo.json. The concept DOI
+never changes, which is why the shipped CITATION.cff carries it: the
+files inside a deposit can name their own citable DOI before the
+version is minted, so a deposit can never again archive files that
+disclaim their own identifier (the failure the 2026-09-03 release audit
+found in every v1.0.0 record). Each new version additionally receives
+its own version DOI from Zenodo at publish time; it is reported in the
+output and needs no write-back into the repository.
+
+--write-doi (first deposits only) patches the experiment's CITATION.cff
+with the minted concept DOI. In CI the DOIs are written to --out and the
+step summary instead, and a maintainer applies them through the normal
+issue -> branch -> PR flow.
 """
 import argparse
 import io
@@ -103,13 +120,25 @@ def resolve_experiment(name):
     sys.exit(f"no such experiment: {name}\navailable: {available}")
 
 
-def plan(all_experiments, experiment):
+def plan(all_experiments, experiment, new_version=False):
     """Resolve the selection into (to_deposit, skipped) without any network.
 
     `skipped` is a list of (experiment, doi) for the ones already published.
+    With --new-version the requirement inverts: the one named experiment
+    must already record a DOI (the record to version), and an experiment
+    with no DOI is an error, never a fallback to a first deposit.
     """
     if all_experiments and experiment:
         sys.exit("pass --all or --experiment, not both")
+    if new_version:
+        if all_experiments or not experiment:
+            sys.exit("--new-version takes exactly one --experiment <name>: "
+                     "a version release names the record it revises")
+        exp = resolve_experiment(experiment)
+        if not recorded_doi(exp):
+            sys.exit(f"{exp.name} records no DOI, so there is no published "
+                     "record to version; a first release is a plain deposit")
+        return [exp], []
     if all_experiments:
         targets = sorted((p for p in EXP.glob("*") if p.is_dir()),
                          key=lambda p: p.name)
@@ -152,6 +181,51 @@ def deposit_one(exp, token, base_url, publish):
             "published": bool(publish), "html": dep["links"].get("html")}
 
 
+def new_version_one(exp, token, base_url, publish):
+    """Create, upload, and optionally publish a new version of a record.
+
+    The recorded DOI is the concept DOI; resolving its record id through
+    the public records API yields the latest published version, whose
+    deposition the versioning action forks. The inherited files are
+    removed so the new version carries exactly the current bundle zip,
+    and the metadata is replaced from zenodo.json (which carries the new
+    bundle version and publication date).
+    """
+    concept = recorded_doi(exp)
+    recid = concept.rsplit(".", 1)[-1]
+    latest = api("GET", f"{base_url}/api/records/{recid}", token)
+    latest_id = latest["id"]
+    nv = api("POST", f"{base_url}/api/deposit/depositions/{latest_id}"
+                     "/actions/newversion", token)
+    draft_url = nv.get("links", {}).get("latest_draft")
+    if not draft_url:
+        sys.exit(f"{exp.name}: newversion returned no draft link")
+    draft = api("GET", draft_url, token)
+    dep_id = draft["id"]
+    for f in api("GET", f"{base_url}/api/deposit/depositions/{dep_id}/files",
+                 token):
+        api("DELETE",
+            f"{base_url}/api/deposit/depositions/{dep_id}/files/{f['id']}",
+            token)
+    meta = json.loads((exp / "zenodo.json").read_text())
+    api("PUT", f"{base_url}/api/deposit/depositions/{dep_id}", token,
+        {"metadata": meta})
+    draft = api("GET", f"{base_url}/api/deposit/depositions/{dep_id}", token)
+    bucket = draft["links"]["bucket"]
+    api("PUT", f"{bucket}/{exp.name}.zip", token, data=zip_experiment(exp),
+        headers={"Content-Type": "application/octet-stream"})
+    prereserved = draft.get("metadata", {}).get("prereserve_doi", {}).get("doi")
+    if publish:
+        pub = api("POST", f"{base_url}/api/deposit/depositions/{dep_id}"
+                          "/actions/publish", token)
+        doi = pub.get("doi") or prereserved
+    else:
+        doi = prereserved
+    return {"experiment": exp.name, "deposit_id": dep_id, "doi": doi,
+            "concept_doi": concept, "published": bool(publish),
+            "html": draft["links"].get("html")}
+
+
 def write_doi(exp, doi):
     cff = exp / "CITATION.cff"
     text = cff.read_text()
@@ -175,22 +249,30 @@ def main():
     ap.add_argument("--base-url", default="https://sandbox.zenodo.org")
     ap.add_argument("--publish", action="store_true")
     ap.add_argument("--write-doi", action="store_true")
+    ap.add_argument("--new-version", action="store_true",
+                    help="deposit a new version of the one named, already "
+                         "published experiment instead of a new record")
     ap.add_argument("--dry-run", action="store_true",
                     help="print the plan and stop: no token, no network")
     ap.add_argument("--summary")
     ap.add_argument("--out")
     args = ap.parse_args()
 
-    to_deposit, skipped = plan(args.all, args.experiment)
+    to_deposit, skipped = plan(args.all, args.experiment, args.new_version)
 
+    verb = "deposit a new version of" if args.new_version else "deposit"
     for exp, doi in skipped:
         print(f"{exp.name}: skip, already published as {doi}")
     for exp in to_deposit:
-        print(f"{exp.name}: would deposit" if args.dry_run
-              else f"{exp.name}: depositing")
+        print(f"{exp.name}: would {verb}"
+              + (f" {recorded_doi(exp)}" if args.new_version else "")
+              if args.dry_run else f"{exp.name}: depositing"
+              + (" a new version" if args.new_version else ""))
 
     if args.dry_run:
-        print(f"\nplan: {len(to_deposit)} to deposit, {len(skipped)} skipped "
+        print(f"\nplan: {len(to_deposit)} to {verb.split()[0]}"
+              + (" (new version)" if args.new_version else "")
+              + f", {len(skipped)} skipped "
               f"(target {args.base_url}, publish={args.publish})")
         if args.summary:
             with open(args.summary, "a") as fh:
@@ -198,7 +280,7 @@ def main():
                 for exp, doi in skipped:
                     fh.write(f"| {exp.name} | skip, published as {doi} |\n")
                 for exp in to_deposit:
-                    fh.write(f"| {exp.name} | would deposit |\n")
+                    fh.write(f"| {exp.name} | would {verb} |\n")
         return
     if not to_deposit:
         print("nothing to deposit: every selected experiment already has a DOI.")
@@ -210,11 +292,15 @@ def main():
 
     results = []
     for exp in to_deposit:
-        r = deposit_one(exp, token, args.base_url.rstrip("/"), args.publish)
+        if args.new_version:
+            r = new_version_one(exp, token, args.base_url.rstrip("/"),
+                                args.publish)
+        else:
+            r = deposit_one(exp, token, args.base_url.rstrip("/"), args.publish)
         results.append(r)
         print(f"{r['experiment']}: doi={r['doi']} (deposit {r['deposit_id']}, "
               f"published={r['published']})")
-        if args.write_doi and r["doi"]:
+        if args.write_doi and r["doi"] and not args.new_version:
             write_doi(exp, r["doi"])
     if args.out:
         Path(args.out).write_text(json.dumps(results, indent=2) + "\n")

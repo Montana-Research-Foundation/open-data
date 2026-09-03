@@ -18,8 +18,8 @@ authors:
   - given-names: Francieli
     family-names: Carra
     affiliation: Montana Research Foundation
-version: "1.0.0"
-date-released: "2026-09-01"
+version: "1.0.1"
+date-released: "2026-09-03"
 license: CC-BY-4.0
 url: "https://montanaresearch.org"
 repository-code: "https://github.com/Montana-Research-Foundation/open-data/tree/main/experiments/MRF-2026-04-task-design-collapse"
@@ -27,4 +27,5 @@ keywords:
   - reproducibility
   - language-model evaluation
 # This experiment has its own Zenodo deposit and DOI, minted on release.
-doi: 10.5281/zenodo.22250740
+# Concept DOI: resolves to the latest deposited version of this bundle.
+doi: 10.5281/zenodo.22250739
